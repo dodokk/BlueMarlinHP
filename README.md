@@ -1,14 +1,11 @@
-# frontend-templateドキュメント
+# BlueMarlinドキュメント
 
 ### 使用しているフレームワーク・ライブラリ
 
 - react
 - typescript
 - react-router
-- react-redux
-- redux-toolkit
 - styled-components
-- axios
 - husky
 - lint-staged
 - typescript-eslint
@@ -16,7 +13,7 @@
 
 ### 使用しているデザインパターン
 
-- アトミックデザイン
+- (なし)
 
 ### ディレクトリ構造
 
@@ -33,91 +30,73 @@
 │   ├── manifest.json
 │   └── robots.txt
 ├── src
-│   ├── api
-│   │   ├── base.ts     <- axiosの共通部分
-│   │   └── sample.ts
 │   ├── index.css
 │   ├── index.tsx
 │   ├── react-app-env.d.ts
-│   ├── redux
-│   │   ├── modules/     <- actionとreducerを管理（唯一stateを変更できる部分）
-│   │   ├── selectors/      <- stateを管理
-│   │   └── store.js      <- reduxの初期設定など
 │   ├── serviceWorker.js
 │   ├── utils
 │   │   ├── history.ts      <- 履歴情報を作成（変更不要）
-│   │   ├── size.ts     <- 共通して使いたい長さや大きさ
-│   │   └── types.ts　    <- バックのDBと同じ型を格納
+│   │   └── size.ts     <- 共通して使いたい長さや大きさがもしあれば
 │   └── views
-│       ├── Pages.tsx       <- [Rooting] templatesのみに依存
-│       ├── atoms/      <- [Presentational] 依存なし 最小単位のパーツ
-│       ├── molecules/      <- [Presentational] atomsのみに依存 セットで使いたいパーツ
-│       ├── organisms/      <- [Container] atomsとmoleculesに依存 独立した区画 selectorからデータ取る
-│       └── templates/      <- [Container] organismのみに依存 ページ全体 イベントの処理書く
+│       ├── Pages.tsx       <- 全体のページ構成を設定
+│       ├── BaseWrapper     <- ヘッダーとフッターのこと(全ページの共通部分)
+│       │   ├── BaseWrapper.tsx
+│       │   ├── Footer.tsx
+│       │   ├── Header.tsx
+│       │   └── index.ts        <- importしやすくするためのファイルなのであんまり気にしなくてOK
+│       └── components      <- 個別のページなので、主にここを編集することになると思われる
+│           ├── Aboutus.tsx
+│           ├── Gallery.tsx
+│           ├── Generation.tsx
+│           ├── Member.tsx
+│           ├── QandA.tsx
+│           └── Top.tsx
 ├── tsconfig.json
 └── yarn.lock
 ```
 
+## サイトマップ
 
-## 使い方
+[bluemarlin_hp_sitemap.pdf](https://github.com/dodokk/BlueMarlinHP/files/4363243/bluemarlin_hp_sitemap.pdf)
 
-- 新しいプロジェクトを開発するとき
+## 環境構築
 
     1. cloneする
         ```bash
-        git clone https://github.com/dodokk/frontend-template
+        git clone https://github.com/dodokk/BlueMarlinHP
         ```
 
-    1. ディレクトリ名を新しいプロジェクト名に変更する
-        ```bash
-        mv frontend-template {プロジェクト名}
-        ```
-
-    1. ディレクトリ内に移動し、gitの情報を新しくする
-        ```bash
-        cd {プロジェクト名}
-        rm -rf .git
-        git init
-        git remote add origin {新しいプロジェクトのリポジトリURL}
-        ```
-
-    1. パッケージをインストールし、念のため最新にする
+    1. 依存パッケージをインストールする
         ```bash
         yarn
-        yarn upgrade
+        ```
+        もしyarnが使えなければ`npm install -g yarn`でインストール可能  
+        npmも使えなければ→https://qiita.com/kyosuke5_20/items/c5f68fc9d89b84c0df09
+
+## 起動方法(ローカル)
+
+    1. 環境構築を行う
+    
+    1. カレントディレクトリが`BlueMarlinHP`なのを確認する
+    
+    1. 以下のコマンドを実行する
+        ```bash
+        yarn start
         ```
 
-    1. プロジェクト情報を書き換える
+## 開発方法
 
-        - `public/`内の`favicon.ico`,`logo192.png`,`logo512.png`
-        - `public/index.html`のdescliptionとtitle
-        - `package.json`のname,version,private
-        - `Readme.md`(このファイル)
-
-    1. 独立したプロジェクトとして開発する
+    1. 作業開始時に`git pull`する
     
-    1. コピペに使ったsampleファイルを消す
-
-- reduxを追加するとき
-
-    1. `redux/modules/〇〇Module.ts`を作成する（`sampleModule.ts`を参考）
+    1. `BlueMarlinHP/src/views/{自分の作業したいファイル}`をモックアップを元に変更する
     
-    1. `redux/selectors/〇〇Selector.ts`を作成する(`sampleSelector.ts`を参考)
-    
-    1. `redux/store.ts`のrootReducerに作ったreducerを追加する
-
-- ページを追加するとき
-
-    1. モックアップをatoms,molecules,organisms,templatesに分解する
-    
-    1. `.tsx`ファイルをatomsから順に開発する
-    
-    1. あまりにファイルが多い時はディレクトリでまとめて`index.ts`でexportする
-    
-    1. `views/Pages.tsx`にルーティングを追加する
-
-- APIを追加するとき
-
-    1. `api/〇〇.ts`を作成する(`sample.ts`を参考)
-    
-    1. `redux/modules/（任意のモジュール）.ts`にredux-thunkを使った非同期関数を書く(`sampleModule.ts`下部を参考)
+    1. ローカルリポジトリに保存する
+        ```bash
+        git add .
+        git commit -m "作業内容を簡潔に書く！"
+        ```
+        
+    1. masterブランチでOKなのでpushする
+        ```bash
+        git push origin master
+        ```
