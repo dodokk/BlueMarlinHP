@@ -61,42 +61,42 @@
 
 ## 環境構築
 
-    1. cloneする
-        ```bash
-        git clone https://github.com/dodokk/BlueMarlinHP
-        ```
+1. cloneする
+    ```bash
+    git clone https://github.com/dodokk/BlueMarlinHP
+    ```
 
-    1. 依存パッケージをインストールする
-        ```bash
-        yarn
-        ```
-        もしyarnが使えなければ`npm install -g yarn`でインストール可能  
-        npmも使えなければ→https://qiita.com/kyosuke5_20/items/c5f68fc9d89b84c0df09
+1. 依存パッケージをインストールする
+    ```bash
+    yarn
+    ```
+    もしyarnが使えなければ`npm install -g yarn`でインストール可能  
+    npmも使えなければ→https://qiita.com/kyosuke5_20/items/c5f68fc9d89b84c0df09
 
 ## 起動方法(ローカル)
 
-    1. 環境構築を行う
-    
-    1. カレントディレクトリが`BlueMarlinHP`なのを確認する
-    
-    1. 以下のコマンドを実行する
-        ```bash
-        yarn start
-        ```
+1. 環境構築を行う
+
+1. カレントディレクトリが`BlueMarlinHP`なのを確認する
+
+1. 以下のコマンドを実行する
+    ```bash
+    yarn start
+    ```
 
 ## 開発方法
 
-    1. 作業開始時に`git pull`する
-    
-    1. `BlueMarlinHP/src/views/{自分の作業したいファイル}`をモックアップを元に変更する
-    
-    1. ローカルリポジトリに保存する
-        ```bash
-        git add .
-        git commit -m "作業内容を簡潔に書く！"
-        ```
-        
-    1. masterブランチでOKなのでpushする
-        ```bash
-        git push origin master
-        ```
+1. 作業開始時に`git pull`する
+
+1. `BlueMarlinHP/src/views/{自分の作業したいファイル}`をモックアップを元に変更する
+
+1. ローカルリポジトリに保存する
+    ```bash
+    git add .
+    git commit -m "作業内容を簡潔に書く！"
+    ```
+
+1. masterブランチでOKなのでpushする
+    ```bash
+    git push origin master
+    ```
