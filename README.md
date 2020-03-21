@@ -24,8 +24,8 @@
 ├── node_modules/
 ├── public
 │   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
+│   ├── index.html      <- タイトルとかサイトの説明を記入する部分あり
+│   ├── logo192.png
 │   ├── logo512.png
 │   ├── manifest.json
 │   └── robots.txt
@@ -57,7 +57,7 @@
 
 ## サイトマップ
 
-[bluemarlin_hp_sitemap.pdf](https://github.com/dodokk/BlueMarlinHP/files/4363243/bluemarlin_hp_sitemap.pdf)
+![sitemap](https://user-images.githubusercontent.com/47663894/77231174-a006d180-6bdc-11ea-87ef-f879c211585b.png)
 
 ## 環境構築
 
