@@ -11,14 +11,15 @@ const BaseWrapper: React.FC = props => {
   // const [samplestate, setSamplestate] = useState("initial");
 
   // ページ遷移するときは↓を使う
-  // const goto〇〇 = () => {
-  //   history.push("/{移動したいpath}")
-  // };
+  const gotoAboutUs = () => {
+    history.push("/Aboutus");
+  };
 
   return (
     <>
       <Header />
-      {props.children}
+      {/* {props.children} */}
+      <div onClick={gotoAboutUs}>Aboutus</div>
       <Footer />
     </>
   );
@@ -33,7 +34,7 @@ const BaseWrapper: React.FC = props => {
 const SampleBox = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;

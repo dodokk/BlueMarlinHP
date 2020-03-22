@@ -111,20 +111,41 @@ const Title = styled.h1`
 `;
 const Font = styled.p`
   font-size: 15px;
-  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E",
-    "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  font-family: "ヒラギノ明朝 ProN", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝",
+    serif;
   color: #f0f8ff;
   font-weight: lighter;
 `;
 const Box = styled.div`
-  padding: 0.5em 1em;
+  // padding: 0.5em 1em;
+  // margin: 2em 0;
+  // color: white;
+  // // background: whitesmoke;
+  // border-left: solid 3px white;
+  // border-right: solid 3px white;
+  // border-top: solid 3px white;
+  // border-bottom: solid 3px white;
   margin: 2em 0;
-  color: white;
-  // background: whitesmoke;
-  border-left: solid 3px white;
-  border-right: solid 3px white;
-  border-top: solid 3px white;
-  border-bottom: solid 3px white;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  Box:before,
+  Box:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+  }
+  Box:before {
+    left: 10px;
+  }
+  Box:after {
+    right: 10px;
+  }
 `;
 
 const Text = styled.div`
