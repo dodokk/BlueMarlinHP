@@ -12,7 +12,7 @@ const Aboutus: React.FC = props => {
   //   history.push("/{移動したいpath}")
   // };
 
-  return <>{<div></div>}</>;
+  return <>{<div>あああ</div>}</>;
 };
 
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
