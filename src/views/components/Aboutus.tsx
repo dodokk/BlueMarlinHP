@@ -12,7 +12,13 @@ const Aboutus: React.FC = props => {
   //   history.push("/{移動したいpath}")
   // };
 
-  return <>{/* ここにjsx(html的なやつ)を書く */}</>;
+  return (
+    <>
+      <div>
+        <div>Hello world!</div>
+      </div>
+    </>
+  );
 };
 
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
