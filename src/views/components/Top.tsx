@@ -1,18 +1,51 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
+import SwipeableViews from "react-swipeable-views";
 
 const Top: React.FC = props => {
-  // コンポーネントが状態を持つときは↓を使う
-  // const [状態変数, 状態変数を変更する関数] = useState(初期値);
-  // const [samplestate, setSamplestate] = useState("initial");
+  const [swipeableActions, setSwipeableActions] = React.useState();
+  const [tabIndex, setTabIndex] = React.useState(0);
+  const items = ["B", "L", "U"];
+  const itemNames = ["シュークリーム", "チョコレートケーキ", "ミルクプリン"];
 
-  // ページ遷移するときは↓を使う
-  // const goto〇〇 = () => {
-  //   history.push("/{移動したいpath}")
-  // };
-
-  return <>{/* ここにjsx(html的なやつ)を書く */}</>;
+  const handleChange = index => {
+    setTabIndex(index);
+  };
+  const TabChange = () => {
+    setTabIndex(0);
+  };
+  return (
+    <>
+      {
+        <div>
+          <ol>
+            {itemNames.map((itemName, i) => (
+              <li
+                value={tabIndex}
+                onClick={TabChange}
+                // className={tabIndex === i && classes[`active${i}`]}
+                // label={itemName}
+              >
+                {itemName}
+              </li>
+            ))}
+          </ol>
+          <SwipeableViews
+            action={actions => setSwipeableActions(actions)}
+            index={tabIndex}
+            onChangeIndex={index => handleChange(index)}
+          >
+            {items.map((item, index) => (
+              // <div className={classes[`slide${index}`]}>
+              <Test>{item}</Test>
+              // </div>
+            ))}
+          </SwipeableViews>
+        </div>
+      }
+    </>
+  );
 };
 
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
@@ -24,11 +57,19 @@ const Top: React.FC = props => {
 const SampleBox = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
-
+const Test = styled.div`
+  height: 100px;
+  width: 100%;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 export default Top;

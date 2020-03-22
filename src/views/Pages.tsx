@@ -22,9 +22,9 @@ const Pages: React.FC = props => {
           <Route exact path="/qanda" component={QandA} />
           <Route exact path="/member" component={Member} />
           <Route exact path="/generation/:xth" component={Generation} />
-          <Route path="*">
+          {/* <Route exact path="*">
             <Redirect to="/" />
-          </Route>
+          </Route> */}
         </BaseWrapper>
       </Switch>
     </Router>

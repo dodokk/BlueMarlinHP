@@ -12,9 +12,12 @@ const Aboutus: React.FC = props => {
   //   history.push("/{移動したいpath}")
   // };
 
-  return <>{<div>あああ</div>}</>;
+  return (
+    <>
+      <Test>あああ</Test>
+    </>
+  );
 };
-
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
 // propsを持たせることも可能(詳しくはstyled-componentで検索)
 
@@ -29,6 +32,14 @@ const SampleBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+const Test = styled.div`
+  height: 10000px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export default Aboutus;

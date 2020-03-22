@@ -14,9 +14,25 @@ const Header: React.FC = props => {
   // const goto〇〇 = () => {
   //   history.push("/{移動したいpath}")
   // };
+  const gotoTop = () => {
+    history.push("/Top");
+  };
   const gotoAboutUs = () => {
     history.push("/Aboutus");
   };
+  const gotoEvents = () => {
+    history.push("/Events");
+  };
+  const gotoMember = () => {
+    history.push("/Member");
+  };
+  const gotoGallary = () => {
+    history.push("/BlueMarlinHP/src/views/components/Gallery.tsx");
+  };
+  const gotoQandA = () => {
+    history.push("/QandA");
+  };
+
   const handleClick = () => {
     setIsSelected(!isSelected);
   };
@@ -25,7 +41,7 @@ const Header: React.FC = props => {
     <>
       {
         /* ここにjsx(html的なやつ)を書く */
-        <header className="l-header">
+        <Menu>
           <BtnTrigger onClick={handleClick} isSelected={isSelected}>
             <span></span>
             <span></span>
@@ -33,27 +49,41 @@ const Header: React.FC = props => {
           </BtnTrigger>
           <MenuModal isSelected={isSelected}>
             <MenuTitle>Menu</MenuTitle>
-            <MenuTop isSelected={isSelected} onClick={gotoAboutUs}>
+            <MenuTop isSelected={isSelected} onClick={gotoTop}>
               Top
             </MenuTop>
-            <MenuAboutUs isSelected={isSelected}>AboutUs</MenuAboutUs>
-            <MenuEvents isSelected={isSelected}>Events</MenuEvents>
-            <MenuMember isSelected={isSelected}>Member</MenuMember>
-            <MenuGallary isSelected={isSelected}>Gallary</MenuGallary>
-            <MenuQandA isSelected={isSelected}>Q&A</MenuQandA>
+            <MenuAboutUs isSelected={isSelected} onClick={gotoAboutUs}>
+              AboutUs
+            </MenuAboutUs>
+            <MenuEvents isSelected={isSelected} onClick={gotoEvents}>
+              Events
+            </MenuEvents>
+            <MenuMember isSelected={isSelected} onClick={gotoMember}>
+              Member
+            </MenuMember>
+            <MenuGallary isSelected={isSelected} onClick={gotoGallary}>
+              Gallary
+            </MenuGallary>
+            <MenuQandA isSelected={isSelected} onClick={gotoQandA}>
+              Q&A
+            </MenuQandA>
             <Sns>
               <Twitter>
-                <Icon src={TwitterIcon}></Icon>
+                <a href="https://mobile.twitter.com/bluemarlin1996">
+                  <Icon src={TwitterIcon}></Icon>
+                </a>
               </Twitter>
               <Instagram>
-                <Icon src={InstagramIcon}></Icon>
+                <a href="https://www.instagram.com/bluemarlin2020/?hl=ja">
+                  <Icon src={InstagramIcon}></Icon>
+                </a>
               </Instagram>
               <Line>
                 <Icon src={LineIcon}></Icon>
               </Line>
             </Sns>
           </MenuModal>
-        </header>
+        </Menu>
       }
     </>
   );
@@ -66,17 +96,10 @@ const Header: React.FC = props => {
 // const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
 //   {適用したいCSS};
 // `
-const SampleBox = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+const Menu = styled.div``;
 const BtnTrigger = styled.div<{ isSelected: boolean }>`
   position: absolute;
+  position: fixed;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -111,6 +134,8 @@ const BtnTrigger = styled.div<{ isSelected: boolean }>`
   }
 `;
 const MenuModal = styled.div<{ isSelected: boolean }>`
+  position: absolute;
+  position: fixed;
   background-color: #777777;
   opacity: ${({ isSelected }) => (isSelected ? "0;" : "0.9;")};
   height: 1000px;
