@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
-import backgroud from "../../assets/aboutus/back2.png";
+import backgroud from "../../assets/aboutus/back3.jpg";
 import pict1 from "../../assets/aboutus/1.jpg";
 import pict2 from "../../assets/aboutus/2.jpg";
 import pict3 from "../../assets/aboutus/3.jpg";
@@ -32,7 +32,7 @@ const Aboutus: React.FC = props => {
         <Main>
           <div>
             <Title>About us</Title>
-            <Font>ダイビングサークルBlueMarlin。</Font>
+            <Font>ダイビングサークルBlueMarlin</Font>
             <Font>春夏秋冬問わず活動しています。</Font>
             <Box>
               <Pict1></Pict1>
@@ -66,9 +66,7 @@ const Aboutus: React.FC = props => {
                   </Figure>
                   {/* <Logo1></Logo1> */}
                   <span>
-                    お金がかかりそうなスキューバ ダイビングですが、学生である
-                    ことや、ダイビングショップの お手伝いをしたりすることで最
-                    大限安く活動できるように工夫 しています。
+                    お金がかかりそうなスキューバダイビングですが、学生であることや、ダイビングショップのお手伝いをしたりすることで最大限安く活動できるように工夫しています。
                   </span>
                 </P>
               </Box2>
@@ -80,9 +78,7 @@ const Aboutus: React.FC = props => {
                     <img src={logo2} width="94" height="94" alt="Logo" />
                   </Figure>
                   <span>
-                    ぶるまりの夏は世界一楽しいことは保証します！せっかく横浜
-                    の大学に来たのに、ぶるまりに入らなかったらもったいない！
-                    新しいことを最高な仲間と始めよう！
+                    ぶるまりの夏は世界一楽しいことは保証します！せっかく横浜の大学に来たのに、ぶるまりに入らなかったらもったいない！新しいことを最高な仲間と始めよう！
                   </span>
                 </P>
               </Box2>
@@ -95,20 +91,14 @@ const Aboutus: React.FC = props => {
                   </Figure>
                   {/* <Logo1></Logo1> */}
                   <span>
-                    ダイビングは興味あるけど、泳げないから不安なあなた。ぶる
-                    まりは現役メンバーにレスキューダイバーが何人もいてOBには
-                    インストラクターもいるから安全！だから、創立以来22年間無
-                    事故！
+                    ダイビングは興味あるけど、泳げないから不安なあなた。ぶるまりは現役メンバーにレスキューダイバーが何人もいてOBにはインストラクターもいるから安全！だから、創立以来22年間無事故！
                   </span>
                 </P>
               </Box2>
             </Box>
             <Box>
               <Font2>
-                横浜にはたくさんのダイビングサークルがあり
-                ますが、その中でブルーマーリンが誇れるとこ
-                ろは「セルフダイビングができること」と
-                「ダイビングの本数」が多いことです。
+                横浜にはたくさんのダイビングサークルがありますが、その中でブルーマーリンが誇れるところは「セルフダイビングができること」と「ダイビングの本数」が多いことです。
               </Font2>
             </Box>
           </div>
@@ -162,8 +152,7 @@ const Title = styled.h1`
 `;
 const Font = styled.p`
   font-size: 15px;
-  font-family: "ヒラギノ明朝 ProN", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝",
-    serif;
+  font-family: "ヒラギノ明朝 ProN", serif;
   color: #f0f8ff;
   font-weight: lighter;
 `;
@@ -172,24 +161,20 @@ const Font2 = styled.p`
   width: 314px;
   font-size: 15px;
   text-align: left;
-  font-family: "ヒラギノ明朝 ProN", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝",
-    serif;
+  font-family: "ヒラギノ明朝 ProN", serif;
   color: #f0f8ff;
   font-weight: lighter;
   margin: 0px auto;
 `;
 const Box = styled.div`
-  // padding: 0.5em 1em;
+  margin: auto;
+  margin-top: 30px;
+  // padding-bottom: -100px;
   // margin: 2em 0;
-  // color: white;
-  // // background: whitesmoke;
-  // border-left: solid 3px white;
-  // border-right: solid 3px white;
-  // border-top: solid 3px white;
-  // border-bottom: solid 3px white;
-  margin: 2em 0;
   position: relative;
   padding: 0.5em 1.5em;
+  // display: inline-block;
+  width: 295px;
   border-top: solid 2px white;
   border-bottom: solid 2px white;
   :before,
@@ -203,17 +188,53 @@ const Box = styled.div`
     background-color: white;
   }
   :before {
-    left: 5px;
+    left: -10px;
   }
   :after {
-    right: 5px;
+    right: -10px;
   }
 `;
 
 const Box2 = styled.div`
-  height: 170px;
-  width: 350px;
+  height: 180px;
+  width: 323px;
   margin: 0px auto;
+  margin-top: -20px;
+`;
+
+const Box3 = styled.div`
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+  padding: 0.5em 1.5em;
+  width: 200px;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  // :after,
+  :before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 2px;
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 20px);
+    background-color: white;
+  }
+  :after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 2px;
+    height: -webkit-calc(100% - 30px);
+    // height: calc(100% - 20px);
+    background-color: white;
+  }
+  :before {
+    left: -10px;
+  }
+  :after {
+    right: -10px;
+  }
 `;
 
 const Text = styled.div`
@@ -222,6 +243,8 @@ const Text = styled.div`
   color: #f0f8ff;
   font-weight: Bold;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
 `;
 
 const Text2 = styled.p`
@@ -245,14 +268,21 @@ const Text3 = styled.p`
 `;
 
 const P = styled.p`
+  // height: 180px;
+  // width: 252px;
+  text-align: left;
   span {
-    height: 157px;
-    width: 183px;
+    // vertical-align:10em
+    // height: 157px;
+    // width: 183px;
+    text-align: left;
     font-size: 13px;
     font-family: "Bodoni 72 ";
     color: #f0f8ff;
     font-weight: lighter;
-    text-align: left;
+    // margin-bottom: 30px;
+    // padding-top: 10px;
+    // margin-left: -20px;
   }
   p {
     font-size: 18px;
@@ -260,7 +290,8 @@ const P = styled.p`
     color: #f0f8ff;
     font-weight: Bold;
     text-align: left;
-    margin: 2px 30px;
+    margin-bottom: -20px;
+    margin-left: 8px;
   }
 `;
 
@@ -270,6 +301,8 @@ const Pict1 = styled.div`
   background-image: url(${pict1});
   background-size: cover;
   margin: 0 auto;
+  margin-top: 20px;
+  // margin-left: 5px;
 `;
 
 const Pict2 = styled.div`
@@ -278,6 +311,8 @@ const Pict2 = styled.div`
   background-image: url(${pict2});
   background-size: cover;
   margin: 0 auto;
+  margin-top: 20px;
+  // margin-left: 5px;
 `;
 
 const Pict3 = styled.div`
@@ -286,28 +321,15 @@ const Pict3 = styled.div`
   background-image: url(${pict3});
   background-size: cover;
   margin: 0 auto;
+  margin-top: 15px;
+  // margin-left: 5px;
 `;
 
-const Logo1 = styled.p`
-  height: 94px;
-  width: 94px;
-  background-image: url(${pict3});
-  background-size: cover;
-  align: left;
-`;
 const Figure = styled.figure`
   float: left;
+  margin-left: -20px;
+  margin-right: 10px;
 `;
-// const Text3 = styled.p`
-//   height: 133px;
-//   width: 182px;
-//   font-size: 13px;
-//   font-family: "Bodoni 72";
-//   color: #f0f8ff;
-//   font-weight: lighter;
-//   text-align: left;
-//   align: right;
-// `;
 const Test = styled.div`
   height: 10000px;
   width: 100%;
