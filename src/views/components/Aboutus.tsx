@@ -61,6 +61,13 @@ const Aboutus: React.FC = props => {
                 大限安く活動できるように工夫 しています。
               </p>
             </Box>
+            <Box>
+              <Font>
+                僕たちは22th(3年生)15人、23th(2年生)15人で
+                活動しています。写真をタップして一人一人の
+                自己紹介を覗いてみてください。
+              </Font>
+            </Box>
           </div>
         </Main>
         <Footer>
