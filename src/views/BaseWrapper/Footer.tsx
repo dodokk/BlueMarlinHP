@@ -1,18 +1,36 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
+import TwitterIcon from "../images/twitter.png";
+import InstagramIcon from "../images/instagram.png";
+import LineIcon from "../images/line.png";
 
 const Footer: React.FC = props => {
-  // コンポーネントが状態を持つときは↓を使う
-  // const [状態変数, 状態変数を変更する関数] = useState(初期値);
-  // const [samplestate, setSamplestate] = useState("initial");
-
-  // ページ遷移するときは↓を使う
-  // const goto〇〇 = () => {
-  //   history.push("/{移動したいpath}")
-  // };
-
-  return <>{/* ここにjsx(html的なやつ)を書く */}</>;
+  return (
+    <>
+      {
+        <Contact>
+          <ContactText>お問い合わせ</ContactText>
+          <Sinkan>只今、新歓の申込みを受け付けております。</Sinkan>
+          <Sns>
+            <Twitter>
+              <a href="https://mobile.twitter.com/bluemarlin1996">
+                <Icon src={TwitterIcon}></Icon>
+              </a>
+            </Twitter>
+            <Instagram>
+              <a href="https://www.instagram.com/bluemarlin2020/?hl=ja">
+                <Icon src={InstagramIcon}></Icon>
+              </a>
+            </Instagram>
+            <Line>
+              <Icon src={LineIcon}></Icon>
+            </Line>
+          </Sns>
+        </Contact>
+      }
+    </>
+  );
 };
 
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
@@ -21,14 +39,61 @@ const Footer: React.FC = props => {
 // const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
 //   {適用したいCSS};
 // `
-const SampleBox = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const Contact = styled.div`
+  height: 170px;
+  width: 90%;
+  border-top: solid 1px #707070;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  margin-top: auto;
+  font-family: ヒラギノ明朝 ProN;
+  text-align: center;
+`;
+const ContactText = styled.div`
+  height: 16px;
+  width: 85px;
+  font-size: 13px;
+  border-bottom: solid 1px #707070;
+  margin: 0 auto;
+  margin-top: 20px;
+`;
+const Sinkan = styled.div`
+  margin-top: 20px;
+  font-size: 11px;
+`;
+const Sns = styled.div`
+  height: 80px;
+  width: 80%;
+  margin: 0 auto;
+  // background-color:#ddd;
+  position: relative;
+  margin-top: 20px;
+`;
+const Twitter = styled.div`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+`;
+const Instagram = styled.div`
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+`;
+const Line = styled.div`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+`;
+const Icon = styled.img`
+  max-width: 100%;
+  height: auto;
+  width/***/: auto;
+  opacity: 0.7;
 `;
 
 export default Footer;

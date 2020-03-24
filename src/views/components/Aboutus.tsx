@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
-import backgroud from "../../assets/aboutus/2.jpg";
+import backgroud from "../../assets/aboutus/back2.png";
 import pict1 from "../../assets/aboutus/1.jpg";
 import pict2 from "../../assets/aboutus/2.jpg";
 import pict3 from "../../assets/aboutus/3.jpg";
-import logo from "../../assets/aboutus/3.jpg";
+import logo from "../../assets/aboutus/安く.png";
+import logo2 from "../../assets/aboutus/楽しく.png";
+import logo3 from "../../assets/aboutus/安全に.png";
 const Aboutus: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
   // const [状態変数, 状態変数を変更する関数] = useState(初期値);
@@ -16,20 +18,22 @@ const Aboutus: React.FC = props => {
   //   history.push("/{移動したいpath}")
   // };
   console.log(logo);
+  console.log(logo2);
+  console.log(logo3);
 
   return (
     <>
       <body>
-        <Header>
+        {/* <Header>
           <div>
             <div>タブメニュー</div>
           </div>
-        </Header>
+        </Header> */}
         <Main>
           <div>
             <Title>About us</Title>
-            <Font>ここは物語が始まるところ。</Font>
-            <Font>素敵な仲間と青に囲まれ過ごす生活。</Font>
+            <Font>ダイビングサークルBlueMarlin。</Font>
+            <Font>春夏秋冬問わず活動しています。</Font>
             <Box>
               <Pict1></Pict1>
               <Text>Blue Marlinとは</Text>
@@ -53,20 +57,59 @@ const Aboutus: React.FC = props => {
             <Box>
               <Pict3></Pict3>
               <Text>モットー</Text>
-              <p>
-                <img src={logo} width="94" height="94" alt="Logo" />
-                {/* <Logo1></Logo1> */}
-                お金がかかりそうなスキューバ ダイビングですが、学生である
-                ことや、ダイビングショップの お手伝いをしたりすることで最
-                大限安く活動できるように工夫 しています。
-              </p>
+              <Box2>
+                <P>
+                  <p>安く</p>
+                  <p></p>
+                  <Figure>
+                    <img src={logo} width="94" height="94" alt="Logo" />
+                  </Figure>
+                  {/* <Logo1></Logo1> */}
+                  <span>
+                    お金がかかりそうなスキューバ ダイビングですが、学生である
+                    ことや、ダイビングショップの お手伝いをしたりすることで最
+                    大限安く活動できるように工夫 しています。
+                  </span>
+                </P>
+              </Box2>
+              <Box2>
+                <P>
+                  <p>楽しく</p>
+                  <p></p>
+                  <Figure>
+                    <img src={logo2} width="94" height="94" alt="Logo" />
+                  </Figure>
+                  <span>
+                    ぶるまりの夏は世界一楽しいことは保証します！せっかく横浜
+                    の大学に来たのに、ぶるまりに入らなかったらもったいない！
+                    新しいことを最高な仲間と始めよう！
+                  </span>
+                </P>
+              </Box2>
+              <Box2>
+                <P>
+                  <p>安全に</p>
+                  <p></p>
+                  <Figure>
+                    <img src={logo3} width="94" height="94" alt="Logo" />
+                  </Figure>
+                  {/* <Logo1></Logo1> */}
+                  <span>
+                    ダイビングは興味あるけど、泳げないから不安なあなた。ぶる
+                    まりは現役メンバーにレスキューダイバーが何人もいてOBには
+                    インストラクターもいるから安全！だから、創立以来22年間無
+                    事故！
+                  </span>
+                </P>
+              </Box2>
             </Box>
             <Box>
-              <Font>
-                僕たちは22th(3年生)15人、23th(2年生)15人で
-                活動しています。写真をタップして一人一人の
-                自己紹介を覗いてみてください。
-              </Font>
+              <Font2>
+                横浜にはたくさんのダイビングサークルがあり
+                ますが、その中でブルーマーリンが誇れるとこ
+                ろは「セルフダイビングができること」と
+                「ダイビングの本数」が多いことです。
+              </Font2>
             </Box>
           </div>
         </Main>
@@ -77,7 +120,6 @@ const Aboutus: React.FC = props => {
     </>
   );
 };
-
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
 // propsを持たせることも可能(詳しくはstyled-componentで検索)
 
@@ -89,7 +131,7 @@ const Footer = styled.footer`
   height: 10%;
   width: 100%;
   text-align: center;
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: white;
 `;
 
@@ -98,17 +140,19 @@ const Main = styled.section`
   width: 100%;
   text-align: center;
   padding: 50px 0;
-  background-color: #00ffff;
+  background-color: black;
   background-image: url(${backgroud});
-  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  // background-size: cover;
 `;
-const Header = styled.header`
-  height: 5%;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  background-color: #fff;
-`;
+// const Header = styled.header`
+//   height: 5%;
+//   width: 100%;
+//   text-align: center;
+//   padding: 20px 0;
+//   background-color: black;
+// `;
 const Title = styled.h1`
   text-align: center;
   font-family: "Savoye LET", consive;
@@ -122,6 +166,17 @@ const Font = styled.p`
     serif;
   color: #f0f8ff;
   font-weight: lighter;
+`;
+const Font2 = styled.p`
+  height: 93px;
+  width: 314px;
+  font-size: 15px;
+  text-align: left;
+  font-family: "ヒラギノ明朝 ProN", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝",
+    serif;
+  color: #f0f8ff;
+  font-weight: lighter;
+  margin: 0px auto;
 `;
 const Box = styled.div`
   // padding: 0.5em 1em;
@@ -137,22 +192,28 @@ const Box = styled.div`
   padding: 0.5em 1.5em;
   border-top: solid 2px white;
   border-bottom: solid 2px white;
-  Box:before,
-  Box:after {
+  :before,
+  :after {
     content: "";
     position: absolute;
-    top: -10px;
+    top: 10px;
     width: 2px;
-    height: -webkit-calc(100% + 20px);
-    height: calc(100% + 20px);
-    background-color: black;
+    height: -webkit-calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: white;
   }
-  Box:before {
-    left: 10px;
+  :before {
+    left: 5px;
   }
-  Box:after {
-    right: 10px;
+  :after {
+    right: 5px;
   }
+`;
+
+const Box2 = styled.div`
+  height: 170px;
+  width: 350px;
+  margin: 0px auto;
 `;
 
 const Text = styled.div`
@@ -164,7 +225,7 @@ const Text = styled.div`
 `;
 
 const Text2 = styled.p`
-  height: 205px;
+  height: 215px;
   width: 309px;
   font-size: 13px;
   font-family: "Bodoni 13";
@@ -172,6 +233,35 @@ const Text2 = styled.p`
   font-weight: lighter;
   text-align: left;
   margin: 0px auto;
+`;
+
+const Text3 = styled.p`
+  font-size: 18px;
+  font-family: "Bodoni 72 Oldstyle";
+  color: #f0f8ff;
+  font-weight: lighter;
+  text-align: left;
+  margin: 2px 30px;
+`;
+
+const P = styled.p`
+  span {
+    height: 157px;
+    width: 183px;
+    font-size: 13px;
+    font-family: "Bodoni 72 ";
+    color: #f0f8ff;
+    font-weight: lighter;
+    text-align: left;
+  }
+  p {
+    font-size: 18px;
+    font-family: "Bodoni 72 Oldstyle";
+    color: #f0f8ff;
+    font-weight: Bold;
+    text-align: left;
+    margin: 2px 30px;
+  }
 `;
 
 const Pict1 = styled.div`
@@ -205,16 +295,26 @@ const Logo1 = styled.p`
   background-size: cover;
   align: left;
 `;
-
-const Text3 = styled.p`
-  height: 133px;
-  width: 182px;
-  font-size: 13px;
-  font-family: "Bodoni 72";
-  color: #f0f8ff;
-  font-weight: lighter;
-  text-align: left;
-  align: right;
+const Figure = styled.figure`
+  float: left;
+`;
+// const Text3 = styled.p`
+//   height: 133px;
+//   width: 182px;
+//   font-size: 13px;
+//   font-family: "Bodoni 72";
+//   color: #f0f8ff;
+//   font-weight: lighter;
+//   text-align: left;
+//   align: right;
+// `;
+const Test = styled.div`
+  height: 10000px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export default Aboutus;

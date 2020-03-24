@@ -18,9 +18,9 @@ const BaseWrapper: React.FC = props => {
   return (
     <>
       <Header />
-      {/* {props.children} */}
-      <div onClick={gotoAboutUs}>Aboutus</div>
-      <Footer />
+      {props.children}
+      <div onClick={gotoAboutUs}></div>
+      {/* <Footer /> */}
     </>
   );
 };
