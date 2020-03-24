@@ -79,7 +79,9 @@ const Header: React.FC = props => {
                 </a>
               </Instagram>
               <Line>
-                <Icon src={LineIcon}></Icon>
+                <a href="https://lin.ee/rvBRrW4">
+                  <Icon src={LineIcon}></Icon>
+                </a>
               </Line>
             </Sns>
           </MenuModal>
@@ -103,8 +105,8 @@ const BtnTrigger = styled.div<{ isSelected: boolean }>`
   width: 50px;
   height: 50px;
   cursor: pointer;
-  right: 25px;
-  top: 20px;
+  right: 30px;
+  top: 30px;
   display: inline-block;
   transition: all 2s;
   box-sizing: border-box;
@@ -113,8 +115,8 @@ const BtnTrigger = styled.div<{ isSelected: boolean }>`
     position: absolute;
     left: 10px;
     width: 60%;
-    height: 1px;
-    background-color: black;
+    height: 2px;
+    background-color: white;
     border-radius: 1px;
     transition: all 0.5s;
   }
@@ -124,7 +126,7 @@ const BtnTrigger = styled.div<{ isSelected: boolean }>`
       isSelected ? "" : "translateY(10.5px) rotate(-45deg)"};
   }
   span:nth-of-type(2) {
-    top: 24.5px;
+    top: 24px;
     opacity: ${({ isSelected }) => (isSelected ? "1" : "0")};
   }
   span:nth-of-type(3) {
