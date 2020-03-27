@@ -8,6 +8,8 @@ import pict3 from "../../assets/aboutus/3.jpg";
 import logo from "../../assets/aboutus/安く.png";
 import logo2 from "../../assets/aboutus/楽しく.png";
 import logo3 from "../../assets/aboutus/安全に.png";
+import Header from "../BaseWrapper/Header";
+
 const Aboutus: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
   // const [状態変数, 状態変数を変更する関数] = useState(初期値);
@@ -23,12 +25,8 @@ const Aboutus: React.FC = props => {
 
   return (
     <>
+      <Header />
       <body>
-        {/* <Header>
-          <div>
-            <div>タブメニュー</div>
-          </div>
-        </Header> */}
         <Main>
           <div>
             <Title>About us</Title>

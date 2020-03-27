@@ -12,6 +12,7 @@ import TopR from "../images/Top/Top-R.jpg";
 import TopL2 from "../images/Top/Top-L2.jpg";
 import TopI from "../images/Top/Top-I.jpg";
 import TopN from "../images/Top/Top-N.jpg";
+import Header from "../BaseWrapper/Header";
 
 const Top: React.FC = props => {
   const [tabIndex, setTabIndex] = React.useState(0);
@@ -67,6 +68,7 @@ const Top: React.FC = props => {
     <>
       {
         <div>
+          <Header />
           <Tabs>
             <Tab
               onClick={TabChange0}
@@ -181,8 +183,6 @@ const Tabs = styled.ol`
   left: 20%;
   right: 20%;
   bottom: 100px;
-
-  // background-color:red;
   font-family: "Open Sans", sans-serif;
 
   // right: 0;

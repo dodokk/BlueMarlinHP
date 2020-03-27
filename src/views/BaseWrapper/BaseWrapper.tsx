@@ -11,26 +11,15 @@ const BaseWrapper: React.FC = props => {
   // const [samplestate, setSamplestate] = useState("initial");
 
   // ページ遷移するときは↓を使う
-  const gotoAboutUs = () => {
-    history.push("/Aboutus");
-  };
 
   return (
     <>
-      <Header />
       {props.children}
-      <div onClick={gotoAboutUs}></div>
       {/* <Footer /> */}
     </>
   );
 };
 
-// cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
-// propsを持たせることも可能(詳しくはstyled-componentで検索)
-
-// const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
-//   {適用したいCSS};
-// `
 const SampleBox = styled.div`
   height: 100%;
   width: 100%;

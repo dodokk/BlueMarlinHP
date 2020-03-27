@@ -17,9 +17,11 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-swipeable-views": "^0.13.9",
+    "react-vivus": "^0.0.2",
     "redux-logger": "^3.0.6",
     "styled-components": "^5.0.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "vivus": "^0.4.5"
   },
   "scripts": {
     "start": "react-scripts start",

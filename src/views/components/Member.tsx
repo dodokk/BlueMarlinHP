@@ -1,34 +1,164 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
+import Th22 from "../images/Member/22th.jpg";
+import Th23 from "../images/Member/23th.jpg";
+import ReactVivus from "react-vivus";
+import svg1 from "../images/Member/footertext.svg";
 
 const Member: React.FC = props => {
-  // コンポーネントが状態を持つときは↓を使う
-  // const [状態変数, 状態変数を変更する関数] = useState(初期値);
-  // const [samplestate, setSamplestate] = useState("initial");
+  return (
+    <>
+      {
+        <Screen>
+          <TitleText>
+            主に横国、フェリス、東洋英和<br></br>のメンバーで活動しています。
+          </TitleText>
+          <Member22th>
+            <Text>22th</Text>
+            <ImageBox>
+              <Image src={Th22} />
+              <Button></Button>
+              <Arrow></Arrow>
+              <Arrow1></Arrow1>
+            </ImageBox>
+          </Member22th>
+          <Member23th>
+            <Text>23th</Text>
+            <ImageBox>
+              <Image src={Th23} />
+              <Button></Button>
+              <Arrow></Arrow>
+              <Arrow1></Arrow1>
+            </ImageBox>
+          </Member23th>
 
-  // ページ遷移するときは↓を使う
-  // const goto〇〇 = () => {
-  //   history.push("/{移動したいpath}")
-  // };
-
-  return <>{/* ここにjsx(html的なやつ)を書く */}</>;
+          <FooterText>
+            <ReactVivus
+              id=" foo "
+              option={{
+                file: svg1,
+                type: "scenario-sync",
+                duration: 50,
+                animTimingFunction: " EASE "
+              }}
+              style={{ width: " 100%", position: "absolute", top: "" }}
+            />
+            <Content>
+              僕たちは22th(3年生)15人、23th(2年生)15人で<br></br>
+              活動しています。写真をタップして一人一人の<br></br>
+              自己紹介を覗いてみてください。
+            </Content>
+          </FooterText>
+        </Screen>
+      }
+    </>
+  );
 };
 
-// cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
-// propsを持たせることも可能(詳しくはstyled-componentで検索)
-
-// const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
-//   {適用したいCSS};
-// `
-const SampleBox = styled.div`
-  height: 100%;
+const Screen = styled.div`
+  height: 130vh;
   width: 100%;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
+  background-color: #faf8f5;
   align-items: center;
   justify-content: center;
+  font-family: ヒラギノ明朝 ProN;
+`;
+
+const TitleText = styled.div`
+  position: absolute;
+  font-family: ヒラギノ明朝 ProN;
+  top: 23vh;
+  padding: 0;
+  left: 10%;
+  right: 10%;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+`;
+
+const Member22th = styled.div`
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  height: 35vh;
+  padding: 0;
+  margin: 0 auto;
+  top: 32vh;
+`;
+const Member23th = styled.div`
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  height: 35vh;
+  padding: 0;
+  margin: 0 auto;
+  top: 75vh;
+`;
+const Text = styled.div`
+  font-size: 25px;
+  text-decoration: underline;
+`;
+const ImageBox = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  bottom: 0;
+`;
+const Image = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`;
+const Button = styled.div`
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 50px;
+  width: 50px;
+  background-color: #ffd217;
+  opacity: 0.65;
+  border-radius: 50px 0 0 0;
+  font-family: "Open Sans", sans-serif;
+`;
+const Arrow = styled.div`
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  transform: rotate(45deg);
+  opacity: 1;
+`;
+const Arrow1 = styled.div`
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  transform: rotate(45deg);
+  opacity: 1;
+`;
+const FooterText = styled.div`
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  paddingfont-family: ヒラギノ明朝 ProN;
+  top: 113vh;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  // background-color:#ddd;
+  height: 12vh;
+`;
+const Content = styled.div`
+  margin-top: 1.5vh;
 `;
 
 export default Member;

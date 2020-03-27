@@ -15,7 +15,7 @@ const Header: React.FC = props => {
   //   history.push("/{移動したいpath}")
   // };
   const gotoTop = () => {
-    history.push("/Top");
+    history.push("/");
   };
   const gotoAboutUs = () => {
     history.push("/Aboutus");
