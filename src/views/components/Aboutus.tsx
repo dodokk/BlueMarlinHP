@@ -168,7 +168,7 @@ const Box = styled.div`
     content: "";
     position: absolute;
     top: 10px;
-    width: 2px;
+    width: 1px;
     height: -webkit-calc(100% - 20px);
     height: calc(100% - 20px);
     background-color: white;
@@ -209,7 +209,7 @@ const Text2 = styled.p`
   margin: 0px auto;
 `;
 
-const P = styled.p`
+const P = styled.div`
   text-align: left;
   span {
     text-align: left;
