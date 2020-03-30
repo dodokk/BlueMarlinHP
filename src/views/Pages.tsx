@@ -9,7 +9,7 @@ import Aboutus from "./components/Aboutus";
 import Gallery from "./components/Gallery";
 import QandA from "./components/QandA";
 import Member from "./components/Member";
-import Generation from "./components/Generation";
+import Events from "./components/Events";
 
 const Pages: React.FC = props => {
   return (
@@ -21,7 +21,7 @@ const Pages: React.FC = props => {
           <Route exact path="/gallery" component={Gallery} />
           <Route exact path="/qanda" component={QandA} />
           <Route exact path="/member" component={Member} />
-          <Route exact path="/generation/:xth" component={Generation} />
+          <Route exact path="/events" component={Events} />
           {/* <Route exact path="*">
             <Redirect to="/" />
           </Route> */}
