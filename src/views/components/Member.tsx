@@ -9,6 +9,12 @@ import Header from "../BaseWrapper/Header";
 import Footer from "../BaseWrapper/Footer";
 
 const Member: React.FC = props => {
+  const gotoGeneration22th = () => {
+    history.push("/generation/22th");
+  };
+  const gotoGeneration23th = () => {
+    history.push("/generation/23th");
+  };
   return (
     <>
       <Header />
@@ -19,7 +25,7 @@ const Member: React.FC = props => {
         <Member22th>
           <Text>22th</Text>
           <ImageBox>
-            <Image src={Th22} />
+            <Image src={Th22} onClick={gotoGeneration22th} />
             <Button></Button>
             <Arrow></Arrow>
             <Arrow1></Arrow1>
@@ -28,7 +34,7 @@ const Member: React.FC = props => {
         <Member23th>
           <Text>23th</Text>
           <ImageBox>
-            <Image src={Th23} />
+            <Image src={Th23} onClick={gotoGeneration23th} />
             <Button></Button>
             <Arrow></Arrow>
             <Arrow1></Arrow1>
