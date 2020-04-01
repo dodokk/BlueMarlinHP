@@ -20,11 +20,11 @@ const Pages: React.FC = props => {
       <Switch>
         <BaseWrapper>
           <Route exact path="/" component={Top} />
-          <Route exact path="/aboutus" component={Aboutus} />
-          <Route exact path="/gallery" component={Gallery} />
-          <Route exact path="/qanda" component={QandA} />
-          <Route exact path="/member" component={Member} />
-          <Route exact path="/events" component={Events} />
+          <Route exact path="/Aboutus" component={Aboutus} />
+          <Route exact path="/Gallery" component={Gallery} />
+          <Route exact path="/QandA" component={QandA} />
+          <Route exact path="/Member" component={Member} />
+          <Route exact path="/Events" component={Events} />
           <Route
             exact
             path="/generation/22th"

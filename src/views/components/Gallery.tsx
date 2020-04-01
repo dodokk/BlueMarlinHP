@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
 
+import Header from "../BaseWrapper/Header";
+import Footer from "../BaseWrapper/Footer";
+
 const Gallery: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
   // const [状態変数, 状態変数を変更する関数] = useState(初期値);
@@ -12,7 +15,13 @@ const Gallery: React.FC = props => {
   //   history.push("/{移動したいpath}")
   // };
 
-  return <>{/* ここにjsx(html的なやつ)を書く */}</>;
+  return (
+    <>
+      <Header />
+      <Temp>現在開発中です🙇‍♂️</Temp>
+      {/* <Footer /> */}
+    </>
+  );
 };
 
 // cssを適用するときは↓で定義し、returnの中でオリジナルタグとして使う
@@ -21,8 +30,8 @@ const Gallery: React.FC = props => {
 // const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
 //   {適用したいCSS};
 // `
-const SampleBox = styled.div`
-  height: 100%;
+const Temp = styled.div`
+  height: 100vh;
   width: 100%;
   background-color: #fff;
   display: flex;
