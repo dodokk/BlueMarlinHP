@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
-
+import { RevealGlobalStyles } from "react-genie";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -14,8 +14,8 @@ const BaseWrapper: React.FC = props => {
 
   return (
     <>
+      <RevealGlobalStyles />
       {props.children}
-      {/* <Footer /> */}
     </>
   );
 };

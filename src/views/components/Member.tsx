@@ -5,53 +5,55 @@ import Th22 from "../images/Member/22th.jpg";
 import Th23 from "../images/Member/23th.jpg";
 import ReactVivus from "react-vivus";
 import svg1 from "../images/Member/footertext.svg";
+import Header from "../BaseWrapper/Header";
+import Footer from "../BaseWrapper/Footer";
 
 const Member: React.FC = props => {
   return (
     <>
-      {
-        <Screen>
-          <TitleText>
-            主に横国、フェリス、東洋英和<br></br>のメンバーで活動しています。
-          </TitleText>
-          <Member22th>
-            <Text>22th</Text>
-            <ImageBox>
-              <Image src={Th22} />
-              <Button></Button>
-              <Arrow></Arrow>
-              <Arrow1></Arrow1>
-            </ImageBox>
-          </Member22th>
-          <Member23th>
-            <Text>23th</Text>
-            <ImageBox>
-              <Image src={Th23} />
-              <Button></Button>
-              <Arrow></Arrow>
-              <Arrow1></Arrow1>
-            </ImageBox>
-          </Member23th>
+      <Header />
+      <Screen>
+        <TitleText>
+          主に横国、フェリス、東洋英和<br></br>のメンバーで活動しています。
+        </TitleText>
+        <Member22th>
+          <Text>22th</Text>
+          <ImageBox>
+            <Image src={Th22} />
+            <Button></Button>
+            <Arrow></Arrow>
+            <Arrow1></Arrow1>
+          </ImageBox>
+        </Member22th>
+        <Member23th>
+          <Text>23th</Text>
+          <ImageBox>
+            <Image src={Th23} />
+            <Button></Button>
+            <Arrow></Arrow>
+            <Arrow1></Arrow1>
+          </ImageBox>
+        </Member23th>
 
-          <FooterText>
-            <ReactVivus
-              id=" foo "
-              option={{
-                file: svg1,
-                type: "scenario-sync",
-                duration: 50,
-                animTimingFunction: " EASE "
-              }}
-              style={{ width: " 100%", position: "absolute", top: "" }}
-            />
-            <Content>
-              僕たちは22th(3年生)15人、23th(2年生)15人で<br></br>
-              活動しています。写真をタップして一人一人の<br></br>
-              自己紹介を覗いてみてください。
-            </Content>
-          </FooterText>
-        </Screen>
-      }
+        <FooterText>
+          <ReactVivus
+            id=" foo "
+            option={{
+              file: svg1,
+              type: "scenario-sync",
+              duration: 50,
+              animTimingFunction: " EASE "
+            }}
+            style={{ width: " 100%", position: "absolute", top: "" }}
+          />
+          <Content>
+            僕たちは22th(3年生)15人、23th(2年生)15人で<br></br>
+            活動しています。写真をタップして一人一人の<br></br>
+            自己紹介を覗いてみてください。
+          </Content>
+        </FooterText>
+      </Screen>
+      <Footer />
     </>
   );
 };

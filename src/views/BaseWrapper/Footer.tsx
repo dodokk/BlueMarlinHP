@@ -9,25 +9,27 @@ const Footer: React.FC = props => {
   return (
     <>
       {
-        <Contact>
-          <ContactText>お問い合わせ</ContactText>
-          <Sinkan>只今、新歓の申込みを受け付けております。</Sinkan>
-          <Sns>
-            <Twitter>
-              <a href="https://mobile.twitter.com/bluemarlin1996">
-                <Icon src={TwitterIcon}></Icon>
-              </a>
-            </Twitter>
-            <Instagram>
-              <a href="https://www.instagram.com/bluemarlin2020/?hl=ja">
-                <Icon src={InstagramIcon}></Icon>
-              </a>
-            </Instagram>
-            <Line>
-              <Icon src={LineIcon}></Icon>
-            </Line>
-          </Sns>
-        </Contact>
+        <Screen>
+          <Contact>
+            <ContactText>お問い合わせ</ContactText>
+            <Sinkan>只今、新歓の申込みを受け付けております。</Sinkan>
+            <Sns>
+              <Twitter>
+                <a href="https://mobile.twitter.com/bluemarlin1996">
+                  <Icon src={TwitterIcon}></Icon>
+                </a>
+              </Twitter>
+              <Instagram>
+                <a href="https://www.instagram.com/bluemarlin2020/?hl=ja">
+                  <Icon src={InstagramIcon}></Icon>
+                </a>
+              </Instagram>
+              <Line>
+                <Icon src={LineIcon}></Icon>
+              </Line>
+            </Sns>
+          </Contact>
+        </Screen>
       }
     </>
   );
@@ -39,16 +41,26 @@ const Footer: React.FC = props => {
 // const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
 //   {適用したいCSS};
 // `
+
+const Screen = styled.div`
+  height: 190px;
+  width: 100%;
+  position: absolute;
+  margin-top: auto;
+  font-family: ヒラギノ明朝 ProN;
+  text-align: center;
+  background-color: #faf8f5;
+`;
 const Contact = styled.div`
   height: 170px;
   width: 90%;
   border-top: solid 1px #707070;
   position: absolute;
-  bottom: 0px;
   left: 15px;
-  margin-top: auto;
+  margin-top: 15px;
   font-family: ヒラギノ明朝 ProN;
   text-align: center;
+  // background-color:#FAF8F5
 `;
 const ContactText = styled.div`
   height: 16px;

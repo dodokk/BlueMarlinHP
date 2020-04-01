@@ -10,10 +10,6 @@ const Header: React.FC = props => {
   // const [状態変数, 状態変数を変更する関数] = useState(初期値);
   const [isSelected, setIsSelected] = useState(true);
 
-  // ページ遷移するときは↓を使う
-  // const goto〇〇 = () => {
-  //   history.push("/{移動したいpath}")
-  // };
   const gotoTop = () => {
     history.push("/");
   };
@@ -27,7 +23,7 @@ const Header: React.FC = props => {
     history.push("/Member");
   };
   const gotoGallary = () => {
-    history.push("/BlueMarlinHP/src/views/components/Gallery.tsx");
+    history.push("/Gallery.tsx");
   };
   const gotoQandA = () => {
     history.push("/QandA");
@@ -111,12 +107,15 @@ const BtnTrigger = styled.div<{ isSelected: boolean }>`
   transition: all 2s;
   box-sizing: border-box;
   z-index: 100;
+  border-radius: 5px;
+  background-color: #ddd;
+  opacity: 0.6;
   span {
     position: absolute;
     left: 10px;
     width: 60%;
     height: 2px;
-    background-color: white;
+    background-color: black;
     border-radius: 1px;
     transition: all 0.5s;
   }
@@ -135,6 +134,7 @@ const BtnTrigger = styled.div<{ isSelected: boolean }>`
       isSelected ? "" : "translateY(-10.5px) rotate(45deg);"};
   }
 `;
+
 const MenuModal = styled.div<{ isSelected: boolean }>`
   position: absolute;
   position: fixed;

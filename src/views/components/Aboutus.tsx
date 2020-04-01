@@ -9,6 +9,7 @@ import logo from "../../assets/aboutus/安く.png";
 import logo2 from "../../assets/aboutus/楽しく.png";
 import logo3 from "../../assets/aboutus/安全に.png";
 import Header from "../BaseWrapper/Header";
+import Footer from "../BaseWrapper/Footer";
 
 const Aboutus: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
@@ -26,7 +27,7 @@ const Aboutus: React.FC = props => {
   return (
     <>
       <Header />
-      <Main>
+      <Main style={{}}>
         <div>
           <Title>About us</Title>
           <Font>ダイビングサークルBlueMarlin</Font>
@@ -100,9 +101,7 @@ const Aboutus: React.FC = props => {
           </Box>
         </div>
       </Main>
-      <Footer>
-        <div>お問い合わせ</div>
-      </Footer>
+      <Footer />
     </>
   );
 };
@@ -113,13 +112,13 @@ const Aboutus: React.FC = props => {
 //   {適用したいCSS};
 // `
 
-const Footer = styled.footer`
-  height: 10%;
-  width: 100%;
-  text-align: center;
-  padding: 40px 0;
-  background-color: white;
-`;
+// const Footer = styled.footer`
+//   height: 10%;
+//   width: 100%;
+//   text-align: center;
+//   padding: 40px 0;
+//   background-color: white;
+// `;
 
 const Main = styled.section`
   height: 85%;
