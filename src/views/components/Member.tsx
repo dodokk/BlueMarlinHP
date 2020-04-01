@@ -19,6 +19,9 @@ const Member: React.FC = props => {
     <>
       <Header />
       <Screen>
+        <Title>
+          Member
+        </Title>
         <TitleText>
           主に横国、フェリス、東洋英和<br></br>のメンバーで活動しています。
         </TitleText>
@@ -73,6 +76,17 @@ const Screen = styled.div`
   font-family: ヒラギノ明朝 ProN;
 `;
 
+const Title = styled.h1`
+  position:absolute;
+  top:40px;
+  left:5%;
+  right:5%;
+  text-align: center;
+  font-family: "Savoye LET", consive;
+  color: #030F8F;
+  font-size: 80px;
+  font-weight: lighter;
+`;
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;

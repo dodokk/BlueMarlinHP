@@ -20,6 +20,13 @@ const QandA: React.FC = props => {
       <Header />
 
       <Screen>
+      <Title>
+          Q&A
+        </Title>
+        <TitleText>
+          ブルーマーリンについて<br></br>
+          良くある質問をまとめました。
+        </TitleText>
         <TalkBox>
           <FAQ>良くある質問</FAQ>
           <Reveal
@@ -122,7 +129,29 @@ const Screen = styled.div`
   height: 340vh;
   width: 100%;
   background-color: #faf8f5;
-  // position:relative;
+`;
+const Title = styled.h1`
+  position:absolute;
+  top:40px;
+  left:5%;
+  right:5%;
+  text-align: center;
+  font-family: "Savoye LET", consive;
+  color: #030F8F;
+  font-size: 80px;
+  font-weight: lighter;
+`;
+
+const TitleText = styled.div`
+  position: absolute;
+  font-family: ヒラギノ明朝 ProN;
+  top: 23vh;
+  padding: 0;
+  left: 10%;
+  right: 10%;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
 `;
 const TalkBox = styled.div`
   // height: 120vh;
@@ -134,7 +163,7 @@ const TalkBox = styled.div`
   right: 5%;
   left: 5%;
   margin: 0 auto 20vh auto;
-  top: 50vh;
+  top: 35vh;
   padding: 0 10px 20px 10px;
   font-family: "ヒラギノ明朝 ProN", serif;
   font-weight: 900;

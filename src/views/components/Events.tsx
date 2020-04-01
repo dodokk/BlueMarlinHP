@@ -46,6 +46,9 @@ const Events: React.FC = props => {
     <>
       <Header />
       <Screen>
+        <Title>
+          Events
+        </Title>
         <TitleText>
           ここは物語が始まるところ。<br></br>
           素敵な仲間と青に囲まれ過ごす生活。
@@ -819,6 +822,18 @@ const Screen = styled.div`
   align-items: center;
   justify-content: center;
   font-family: ヒラギノ明朝 ProN;
+`;
+
+const Title = styled.h1`
+  position:absolute;
+  top:40px;
+  left:5%;
+  right:5%;
+  text-align: center;
+  font-family: "Savoye LET", consive;
+  color: #030F8F;
+  font-size: 80px;
+  font-weight: lighter;
 `;
 
 const TitleText = styled.div`
