@@ -20,6 +20,11 @@ const QandA: React.FC = props => {
       <Header />
 
       <Screen>
+        <Title>Q&A</Title>
+        <TitleText>
+          ブルーマーリンについて<br></br>
+          良くある質問をまとめました。
+        </TitleText>
         <TalkBox>
           <FAQ>良くある質問</FAQ>
           <Reveal
@@ -76,8 +81,8 @@ const QandA: React.FC = props => {
               クターをつけずに自分たちだけ で潜りますが、各代にそのダイ
               ビングポイントを熟知したガイ ドメンバーが4~5名ずついるの
               で、安心！安全のための講習も 定期的に受けています。<br></br>
-              こうした取り組みのお陰もあり 創設以来22年間無事故で活動
-              しています。 ​
+              こうした取り組みのお陰もあり 創設以来22年間無事故で活動し
+              ています。
             </Answer>
           </Reveal>
           <Reveal animation={Animation.SlideInLeft} delay={700}>
@@ -122,7 +127,29 @@ const Screen = styled.div`
   height: 340vh;
   width: 100%;
   background-color: #faf8f5;
-  // position:relative;
+`;
+const Title = styled.h1`
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  font-family: "Savoye LET", consive;
+  color: #030f8f;
+  font-size: 80px;
+  font-weight: lighter;
+`;
+
+const TitleText = styled.div`
+  position: absolute;
+  font-family: ヒラギノ明朝 ProN;
+  top: 23vh;
+  padding: 0;
+  left: 10%;
+  right: 10%;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
 `;
 const TalkBox = styled.div`
   // height: 120vh;
@@ -134,7 +161,7 @@ const TalkBox = styled.div`
   right: 5%;
   left: 5%;
   margin: 0 auto 20vh auto;
-  top: 50vh;
+  top: 35vh;
   padding: 0 10px 20px 10px;
   font-family: "ヒラギノ明朝 ProN", serif;
   font-weight: 900;
