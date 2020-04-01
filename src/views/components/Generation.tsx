@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MemberInfoLeft from "./MemberInfoLeft";
 import MemberInfoRight from "./MemberInfoRight";
+import history from "../../utils/history";
 
 interface Props {
   number: number;
@@ -26,17 +27,13 @@ interface Props {
   };
 }
 const Generation: React.FC<Props> = props => {
-  // コンポーネントが状態を持つときは↓を使う
-  // const [状態変数, 状態変数を変更する関数] = useState(初期値);
-  // const [samplestate, setSamplestate] = useState("initial");
-
-  // ページ遷移するときは↓を使う
-  // const goto〇〇 = () => {
-  //   history.push("/{移動したいpath}")
-  // };
+  const gotoMember = () => {
+    history.push("/Member");
+  };
   if (props.member.member16.name === "") {
     return (
       <SampleBox>
+        <Button onClick={gotoMember}>←</Button>
         <Th>{props.number}th</Th>
         <MemberBox>
           <Sex>Mens</Sex>
@@ -158,6 +155,7 @@ const Generation: React.FC<Props> = props => {
   } else {
     return (
       <SampleBox>
+        <Button onClick={gotoMember}>←</Button>
         <Th>{props.number}th</Th>
         <MemberBox>
           <Sex>Mens</Sex>
@@ -298,7 +296,7 @@ const Generation: React.FC<Props> = props => {
 const SampleBox = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #faf8f5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,7 +304,7 @@ const SampleBox = styled.div`
 
 const Th = styled.div`
   font-size: 45px;
-  margin-right: 50%;
+  margin-right: 60%;
   font-family: "ヒラギノ明朝 ProN W6";
   font-weight: lighter;
 `;
@@ -329,5 +327,10 @@ const Text = styled.div`
   margin: 25% 3% 0%;
   font-size: 15px;
   paddingfont-family: ヒラギノ明朝 ProN;
+`;
+const Button = styled.button`
+  margin-right: 75%;
+  font-size: 45px;
+  font-family: "ヒラギノ明朝 ProN";
 `;
 export default Generation;
