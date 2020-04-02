@@ -73,7 +73,7 @@ const Img = styled.img`
   width: 132px;
   height: 132px;
   border: solid 1px black;
-  padding: 4px;
+  padding: 6px;
 `;
 
 const MemberName = styled.div`

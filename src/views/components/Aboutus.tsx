@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import history from "../../utils/history";
+// import history from "../../utils/history";
 import styled from "styled-components";
-import backgroud from "../../assets/aboutus/back3.jpg";
+import backgroud from "../../assets/aboutus/back5.jpg";
 import pict1 from "../../assets/aboutus/1.jpg";
 import pict2 from "../../assets/aboutus/2.jpg";
 import pict3 from "../../assets/aboutus/3.jpg";
@@ -62,7 +62,6 @@ const Aboutus: React.FC = props => {
                 <Figure>
                   <img src={logo} width="94" height="94" alt="Logo" />
                 </Figure>
-                {/* <Logo1></Logo1> */}
                 <span>
                   お金がかかりそうなスキューバダイビングですが、学生であることや、ダイビングショップのお手伝いをしたりすることで最大限安く活動できるように工夫しています。
                 </span>
@@ -87,18 +86,17 @@ const Aboutus: React.FC = props => {
                 <Figure>
                   <img src={logo3} width="94" height="94" alt="Logo" />
                 </Figure>
-                {/* <Logo1></Logo1> */}
                 <span>
                   ダイビングは興味あるけど、泳げないから不安なあなた。ぶるまりは現役メンバーにレスキューダイバーが何人もいてOBにはインストラクターもいるから安全！だから、創立以来22年間無事故！
                 </span>
               </P>
             </Box2>
           </Box>
-          <Box>
+          <Box3>
             <Font2>
               横浜にはたくさんのダイビングサークルがありますが、その中でブルーマーリンが誇れるところは「セルフダイビングができること」と「ダイビングの本数」が多いことです。
             </Font2>
-          </Box>
+          </Box3>
         </div>
       </Main>
       <Footer />
@@ -112,27 +110,27 @@ const Aboutus: React.FC = props => {
 //   {適用したいCSS};
 // `
 
-// const Footer = styled.footer`
-//   height: 10%;
-//   width: 100%;
-//   text-align: center;
-//   padding: 40px 0;
-//   background-color: white;
-// `;
-
 const Main = styled.section`
   height: 85%;
   width: 100%;
   text-align: center;
-  padding: 50px 0;
-  background-color: black;
-  background-image: url(${backgroud});
-  background-position: top;
-  background-repeat: no-repeat;
+  padding: 30px 0;
+  :before{
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    background:url(${backgroud});
+    background-size:cover;
 `;
 
 const Title = styled.h1`
   text-align: center;
+  margin-bottom: 3px;
   font-family: "Savoye LET", consive;
   color: #f0f8ff;
   font-size: 80px;
@@ -156,20 +154,20 @@ const Font2 = styled.p`
 `;
 const Box = styled.div`
   margin: auto;
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
   padding: 0.5em 1.5em;
   width: 295px;
-  border-top: solid 2px white;
-  border-bottom: solid 2px white;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
   :before,
   :after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 20px;
     width: 1px;
-    height: -webkit-calc(100% - 20px);
-    height: calc(100% - 20px);
+    height: -webkit-calc(100% - 40px);
+    height: calc(100% - 40px);
     background-color: white;
   }
   :before {
@@ -185,6 +183,43 @@ const Box2 = styled.div`
   width: 323px;
   // margin: 0px auto;
   margin-top: -20px;
+`;
+
+const Box3 = styled.div`
+  // padding-top: 20px;
+  // top: 20px;
+  border-left: solid 1px white;
+  margin: auto;
+  height: 40px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  position: relative;
+  padding: 0.8em 1.5em;
+  width: 315px;
+  :before {
+    content: "";
+    position: absolute;
+    left: 290px;
+    top: -5px; /*線の上下位置*/
+    display: inline-block;
+    width: 150px; /*線の長さ*/
+    height: 1px; /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); /*位置調整*/
+    background-color: white; /*線の色*/
+  }
+  :after {
+    content: "";
+    position: absolute;
+    left: 180px;
+    bottom: -60px; /*線の上下位置*/
+    display: inline-block;
+    width: 210px; /*線の長さ*/
+    height: 1px; /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); /*位置調整*/
+    background-color: white; /*線の色*/
+  }
 `;
 
 const Text = styled.div`
