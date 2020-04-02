@@ -144,7 +144,7 @@ const Main = styled.section`
 
 const Title = styled.h1`
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: 3px;
   font-family: "Savoye LET", consive;
   color: #f0f8ff;
   font-size: 80px;
