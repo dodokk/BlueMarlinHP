@@ -23,7 +23,7 @@ const Header: React.FC = props => {
     history.push("/Member");
   };
   const gotoGallary = () => {
-    history.push("/Gallery.tsx");
+    history.push("/Gallery");
   };
   const gotoQandA = () => {
     history.push("/QandA");

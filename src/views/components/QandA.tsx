@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { Reveal, RevealMode, Animation } from "react-genie";
 import Header from "../BaseWrapper/Header";
 import Footer from "../BaseWrapper/Footer";
+import svg1 from "../images/Member/footertext.svg";
+import ReactVivus from "react-vivus";
+
+
 
 const QandA: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
@@ -20,9 +24,7 @@ const QandA: React.FC = props => {
       <Header />
 
       <Screen>
-      <Title>
-          Q&A
-        </Title>
+        <Title>Q&A</Title>
         <TitleText>
           ブルーマーリンについて<br></br>
           良くある質問をまとめました。
@@ -113,7 +115,28 @@ const QandA: React.FC = props => {
             </Answer>
           </Reveal>
         </TalkBox>
+        <FooterText>
+          <ReactVivus
+            id=" foo "
+            option={{
+              file: svg1,
+              type: "scenario-sync",
+              duration: 50,
+              animTimingFunction: " EASE "
+            }}
+            style={{ width: " 100%", position: "absolute", top: "" }}
+          />
+          <Content>
+            {/* 僕たちは22th(3年生)15人、23th(2年生)15人で<br></br>
+            活動しています。写真をタップして一人一人の<br></br>
+            自己紹介を覗いてみてください。 */}
+            他にもたくさんの質問を受けています。質問が<br></br>
+            ある方は下のリンクからどうぞ！一つ一つお答<br></br>
+            えします。
+          </Content>
+        </FooterText>
       </Screen>
+      
       <Footer />
     </>
   );
@@ -126,18 +149,18 @@ const QandA: React.FC = props => {
 //   {適用したいCSS};
 // `
 const Screen = styled.div`
-  height: 340vh;
+  height: 315vh;
   width: 100%;
   background-color: #faf8f5;
 `;
 const Title = styled.h1`
-  position:absolute;
-  top:40px;
-  left:5%;
-  right:5%;
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  right: 5%;
   text-align: center;
   font-family: "Savoye LET", consive;
-  color: #030F8F;
+  color: #030f8f;
   font-size: 80px;
   font-weight: lighter;
 `;
@@ -201,6 +224,21 @@ const Answer = styled.div`
   margin: 20px 0 0 auto;
   width: 75%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+`;
+
+const FooterText = styled.div`
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  font-family: "ヒラギノ明朝 ProN", serif;
+  top: 300vh;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  height: 12vh;
+`;
+const Content = styled.div`
+  margin-top: 1.5vh;
 `;
 
 export default QandA;
