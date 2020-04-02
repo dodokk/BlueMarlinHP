@@ -10,8 +10,6 @@ import logo2 from "../../assets/aboutus/楽しく.png";
 import logo3 from "../../assets/aboutus/安全に.png";
 import Header from "../BaseWrapper/Header";
 import Footer from "../BaseWrapper/Footer";
-// import ReactVivus from "react-vivus";
-// import svg1 from "../images/Aboutus/footertext.svg";
 
 const Aboutus: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
@@ -64,7 +62,6 @@ const Aboutus: React.FC = props => {
                 <Figure>
                   <img src={logo} width="94" height="94" alt="Logo" />
                 </Figure>
-                {/* <Logo1></Logo1> */}
                 <span>
                   お金がかかりそうなスキューバダイビングですが、学生であることや、ダイビングショップのお手伝いをしたりすることで最大限安く活動できるように工夫しています。
                 </span>
@@ -89,7 +86,6 @@ const Aboutus: React.FC = props => {
                 <Figure>
                   <img src={logo3} width="94" height="94" alt="Logo" />
                 </Figure>
-                {/* <Logo1></Logo1> */}
                 <span>
                   ダイビングは興味あるけど、泳げないから不安なあなた。ぶるまりは現役メンバーにレスキューダイバーが何人もいてOBにはインストラクターもいるから安全！だから、創立以来22年間無事故！
                 </span>
@@ -97,16 +93,6 @@ const Aboutus: React.FC = props => {
             </Box2>
           </Box>
           <Box3>
-            {/* <ReactVivus
-            id=" foo "
-            option={{
-              file: svg1,
-              type: "scenario-sync",
-              duration: 100,
-              animTimingFunction: " EASE "
-            }}
-            style={{ width: " 295px", position: "relative", top: "" }}
-          /> */}
             <Font2>
               横浜にはたくさんのダイビングサークルがありますが、その中でブルーマーリンが誇れるところは「セルフダイビングができること」と「ダイビングの本数」が多いことです。
             </Font2>
@@ -235,13 +221,6 @@ const Box3 = styled.div`
     background-color: white; /*線の色*/
   }
 `;
-// const Box4 = styled.div`
-//   margin: auto;
-//   margin-top: 50px;
-//   position: relative;
-//   padding: 0.5em 1.5em;
-//   width: 295px;
-// `;
 
 const Text = styled.div`
   font-size: 30px;
@@ -252,24 +231,6 @@ const Text = styled.div`
   margin-top: 10px;
   margin-bottom: 15px;
 `;
-
-// const FooterText = styled.div`
-//   margin: auto;
-//   margin-top: 30px;
-//   position: relative;
-//   // padding: 0.5em 1.5em;
-//   width: 295px;
-//   // position: absolute;
-//   text-align: center;
-//   font-size: 15px;
-//   paddingfont-family: ヒラギノ明朝 ProN;
-//   // top: 113vh;
-//   // width: 295px;
-//   left: 5%;
-//   right: 5%;
-//   // background-color:#ddd;
-//   // height: 12vh;
-// `;
 
 const Text2 = styled.p`
   height: 215px;
@@ -334,9 +295,5 @@ const Figure = styled.figure`
   margin-left: -20px;
   margin-right: 10px;
 `;
-
-// const Content = styled.div`
-//   margin-top: 1.5vh;
-// `;
 
 export default Aboutus;
