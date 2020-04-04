@@ -14,11 +14,6 @@ import ReactVivus from "react-vivus";
 import svg1 from "../images/Member/footertext.svg";
 
 
-
-
-import Header from "../BaseWrapper/Header";
-import Footer from "../BaseWrapper/Footer";
-
 const Gallery: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
   // const [状態変数, 状態変数を変更する関数] = useState(初期値);
@@ -30,7 +25,6 @@ const Gallery: React.FC = props => {
   // };
 
   return (
-<<<<<<< HEAD
   <>
   <Header />
       <Screen>
@@ -90,13 +84,6 @@ const Gallery: React.FC = props => {
         </FooterText>
   <Footer />
   </>
-=======
-    <>
-      <Header />
-      <Temp>現在開発中です🙇‍♂️</Temp>
-      {/* <Footer /> */}
-    </>
->>>>>>> 2b730b23d82cfc5de3485e9b532e8f065574d7a6
   );
 };
 
@@ -106,13 +93,8 @@ const Gallery: React.FC = props => {
 // const {オリジナルのタグ名} = styled.{ベースとなるタグ名}`
 //   {適用したいCSS};
 // `
-<<<<<<< HEAD
 const Screen = styled.div`
-  height: 190vh;
-=======
-const Temp = styled.div`
-  height: 100vh;
->>>>>>> 2b730b23d82cfc5de3485e9b532e8f065574d7a6
+  height: 1500px;
   width: 100%;
   background-color: #faf8f5;
   align-items: center;
@@ -135,7 +117,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 23vh;
+  top: 180px;
   padding: 0;
   left: 10%;
   right: 10%;
@@ -148,9 +130,9 @@ const Movie = styled.div`
   position: relative;
   font-family: ヒラギノ明朝 ProN;
   // background-color: #ddd;
-  top: 300px;
+  top: 15%;
   width:90%;
-  height:850px;
+  height:800px;
   margin:0 auto;
 `;
 
@@ -197,11 +179,11 @@ const FooterText = styled.div`
   text-align: center;
   font-size: 15px;
   font-family: "ヒラギノ明朝 ProN", serif;
-  top: 175vh;
+  top: 1370px;
   width: 90%;
   left: 5%;
   right: 5%;
-  height: 12vh;
+  height: 12v;
 `;
 const Content = styled.div`
   margin-top: 1.5vh;

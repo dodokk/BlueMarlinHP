@@ -43,36 +43,41 @@ const Footer: React.FC = props => {
 // `
 
 const Screen = styled.div`
-  height: 190px;
+  height: 170px;
   width: 100%;
   position: absolute;
   margin-top: auto;
   font-family: ヒラギノ明朝 ProN;
   text-align: center;
   background-color: #faf8f5;
+  
 `;
 const Contact = styled.div`
-  height: 170px;
+  height: 120px;
   width: 90%;
   border-top: solid 1px #707070;
   position: absolute;
   left: 15px;
   margin-top: 15px;
+  padding-top:15px;
   font-family: ヒラギノ明朝 ProN;
   text-align: center;
-  // background-color:#FAF8F5
+  background-color:#FAF8F5
+
 `;
 const ContactText = styled.div`
+  position:absolute;
   height: 16px;
-  width: 85px;
+  width: 40%;
   font-size: 13px;
   border-bottom: solid 1px #707070;
-  margin: 0 auto;
-  margin-top: 20px;
+  left:30%;
+  right:30%;  
 `;
 const Sinkan = styled.div`
   margin-top: 20px;
   font-size: 11px;
+  
 `;
 const Sns = styled.div`
   height: 80px;
@@ -106,6 +111,7 @@ const Icon = styled.img`
   height: auto;
   width/***/: auto;
   opacity: 0.7;
+  
 `;
 
 export default Footer;

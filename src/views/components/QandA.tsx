@@ -149,7 +149,7 @@ const QandA: React.FC = props => {
 //   {適用したいCSS};
 // `
 const Screen = styled.div`
-  height: 315vh;
+  height: 320vh;
   width: 100%;
   background-color: #faf8f5;
 `;
@@ -168,7 +168,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 23vh;
+  top: 180px;
   padding: 0;
   left: 10%;
   right: 10%;
@@ -186,7 +186,7 @@ const TalkBox = styled.div`
   right: 5%;
   left: 5%;
   margin: 0 auto 20vh auto;
-  top: 35vh;
+  top: 40%;
   padding: 0 10px 20px 10px;
   font-family: "ヒラギノ明朝 ProN", serif;
   font-weight: 900;
@@ -211,7 +211,7 @@ const Question = styled.div`
   border-radius: 15px;
   padding: 10px;
   line-height: 3vh;
-  margin: 20px 0 auto 0;
+  margin: 5% 0 auto 0;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 `;
 
@@ -221,7 +221,7 @@ const Answer = styled.div`
   border-radius: 15px;
   padding: 10px;
   line-height: 3vh;
-  margin: 20px 0 0 auto;
+  margin: 5% 0 0 auto;
   width: 75%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 `;
@@ -231,7 +231,7 @@ const FooterText = styled.div`
   text-align: center;
   font-size: 15px;
   font-family: "ヒラギノ明朝 ProN", serif;
-  top: 300vh;
+  top: 306vh;
   width: 90%;
   left: 5%;
   right: 5%;

@@ -3,6 +3,9 @@ import styled from "styled-components";
 import MemberInfoLeft from "./MemberInfoLeft";
 import MemberInfoRight from "./MemberInfoRight";
 import history from "../../utils/history";
+import { Reveal, RevealMode, Animation } from "react-genie";
+import arrow from '../images/InfoImages/arrow.png'
+
 
 interface Props {
   number: number;
@@ -33,18 +36,20 @@ const Generation: React.FC<Props> = props => {
   if (props.member.member16.name === "") {
     return (
       <SampleBox>
-        <Button onClick={gotoMember}>←</Button>
+        <Button onClick={gotoMember}>
+          <Arrow src={arrow}/>
+        </Button>
         <Th>{props.number}th</Th>
         <MemberBox>
           <Sex>Mens</Sex>
           <Flex>
+          
             <MemberInfoLeft
               picture={props.member.member1.picture}
               name={props.member.member1.name}
               profile={props.member.member1.profile}
               text={props.member.member1.doc}
             />
-
             <MemberInfoRight
               picture={props.member.member2.picture}
               name={props.member.member2.name}
@@ -155,7 +160,9 @@ const Generation: React.FC<Props> = props => {
   } else {
     return (
       <SampleBox>
-        <Button onClick={gotoMember}>←</Button>
+        <Button onClick={gotoMember}>
+          <Arrow src={arrow}/>
+        </Button>
         <Th>{props.number}th</Th>
         <MemberBox>
           <Sex>Mens</Sex>
@@ -305,6 +312,7 @@ const SampleBox = styled.div`
 const Th = styled.div`
   font-size: 45px;
   margin-right: 60%;
+  margin-top:20px;
   font-family: "ヒラギノ明朝 ProN W6";
   font-weight: lighter;
 `;
@@ -313,7 +321,7 @@ const Sex = styled.div`
   text-align: center;
   font-family: serif;
   text-decoration: underline;
-  margin: 5%;
+  margin: 10%;
 `;
 
 const Flex = styled.div`
@@ -324,13 +332,27 @@ const MemberBox = styled.div`
 `;
 
 const Text = styled.div`
-  margin: 25% 3% 0%;
+  margin: 10% 3% 10%;
   font-size: 15px;
-  paddingfont-family: ヒラギノ明朝 ProN;
+  font-family: ヒラギノ明朝 ProN;
+  border-top:solid 1px black;
+  padding-top:20px;
 `;
 const Button = styled.button`
-  margin-right: 75%;
-  font-size: 45px;
-  font-family: "ヒラギノ明朝 ProN";
+  width:50px;
+  height:50px;
+  background-color:#ddd;
+  margin-right:80%;
+  margin-top:20px;
+  margin-bottom:50p;
 `;
+ 
+const Arrow = styled.img`
+object-fit: contain;
+width: 100%;
+height: 100%;
+  
+`;
+ 
+
 export default Generation;

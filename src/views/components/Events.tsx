@@ -856,7 +856,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 23vh;
+  top: 180px;
   padding: 0;
   left: 10%;
   right: 10%;
@@ -868,7 +868,7 @@ const Calender = styled.div`
   position: absolute;
   width: 100%;
   height: 300vh;
-  top: 32vh;
+  top: 300px;
   text-align: center;
 `;
 const April = styled.div`
@@ -933,9 +933,10 @@ const January = styled.div`
 `;
 const February = styled.div`
   position: relative;
-  height: 130vh;
+  height: 120vh;
   width: 100%;
   font-family: ヒラギノ明朝 ProN;
+  // background-color:#ddd;
 `;
 const March = styled.div`
   position: relative;

@@ -88,7 +88,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 23vh;
+  top: 180px;
   padding: 0;
   left: 10%;
   right: 10%;
