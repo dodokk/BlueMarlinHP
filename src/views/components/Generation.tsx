@@ -25,15 +25,15 @@ interface Props {
     member12: { name: string; picture: any; profile: string; doc: any };
     member13: { name: string; picture: any; profile: string; doc: any };
     member14: { name: string; picture: any; profile: string; doc: any };
-    member15: { name: string; picture: any; profile: string; doc: any };
-    member16: { name: string; picture: any; profile: string; doc: any };
+    // member15: { name: string; picture: any; profile: string; doc: any };
+    // member16: { name: string; picture: any; profile: string; doc: any };
   };
 }
 const Generation: React.FC<Props> = props => {
   const gotoMember = () => {
     history.push("/Member");
   };
-  if (props.member.member16.name === "") {
+  if (props.member.member14.name === "") {
     return (
       <SampleBox>
         <Button onClick={gotoMember}>
@@ -144,14 +144,14 @@ const Generation: React.FC<Props> = props => {
               text={props.member.member14.doc}
             />
           </Flex>
-          <Flex>
+          {/* <Flex>
             <MemberInfoLeft
               picture={props.member.member15.picture}
               name={props.member.member15.name}
               profile={props.member.member15.profile}
               text={props.member.member15.doc}
             />
-          </Flex>
+          </Flex> */}
         </div>
 
         <Text>{props.text}</Text>
@@ -269,21 +269,21 @@ const Generation: React.FC<Props> = props => {
               profile={props.member.member14.profile}
               text={props.member.member14.doc}
             />
-            <MemberInfoRight
+            {/* <MemberInfoRight
               picture={props.member.member15.picture}
               name={props.member.member15.name}
               profile={props.member.member15.profile}
               text={props.member.member15.doc}
-            />
+            /> */}
           </Flex>
-          <Flex>
+          {/* <Flex>
             <MemberInfoLeft
               picture={props.member.member16.picture}
               name={props.member.member16.name}
               profile={props.member.member16.profile}
               text={props.member.member16.doc}
             />
-          </Flex>
+          </Flex> */}
         </div>
         <>
           <Text>{props.text}</Text>

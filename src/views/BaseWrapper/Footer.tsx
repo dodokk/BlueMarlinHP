@@ -25,7 +25,9 @@ const Footer: React.FC = props => {
                 </a>
               </Instagram>
               <Line>
-                <Icon src={LineIcon}></Icon>
+                <a href="https://lin.ee/rvBRrW4">
+                  <Icon src={LineIcon}></Icon>
+                </a>
               </Line>
             </Sns>
           </Contact>
