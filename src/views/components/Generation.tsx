@@ -24,7 +24,7 @@ interface Props {
     member12: { name: string; picture: any; profile: string; doc: any };
     member13: { name: string; picture: any; profile: string; doc: any };
     member14: { name: string; picture: any; profile: string; doc: any };
-    // member15: { name: string; picture: any; profile: string; doc: any };
+    //member15: { name: string; picture: any; profile: string; doc: any };
     // member16: { name: string; picture: any; profile: string; doc: any };
   };
 }
@@ -32,7 +32,7 @@ const Generation: React.FC<Props> = props => {
   const gotoMember = () => {
     history.push("/Member");
   };
-  if (props.member.member14.name === "") {
+  if (props.member.member9.name === "みおり") {
     return (
       <SampleBox>
         <Button onClick={gotoMember}>
