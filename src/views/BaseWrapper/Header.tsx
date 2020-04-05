@@ -65,17 +65,29 @@ const Header: React.FC = props => {
             </MenuQandA>
             <Sns>
               <Twitter>
-                <a href="https://mobile.twitter.com/bluemarlin1996">
+                <a
+                  href="https://mobile.twitter.com/bluemarlin1996"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon src={TwitterIcon}></Icon>
                 </a>
               </Twitter>
               <Instagram>
-                <a href="https://www.instagram.com/bluemarlin2020/?hl=ja">
+                <a
+                  href="https://www.instagram.com/bluemarlin2020/?hl=ja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon src={InstagramIcon}></Icon>
                 </a>
               </Instagram>
               <Line>
-                <a href="https://lin.ee/rvBRrW4">
+                <a
+                  href="https://lin.ee/rvBRrW4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon src={LineIcon}></Icon>
                 </a>
               </Line>
@@ -156,6 +168,7 @@ const MenuTitle = styled.div`
   top: 92px;
 `;
 const MenuTop = styled.div<{ isSelected: boolean }>`
+  cursor: pointer;
   color: #fff;
   font-size: 30px;
   font-family: ヒラギノ明朝 ProN;
@@ -168,6 +181,7 @@ const MenuTop = styled.div<{ isSelected: boolean }>`
   border-bottom: solid 2px #fff;
 `;
 const MenuAboutUs = styled.div<{ isSelected: boolean }>`
+  cursor: pointer;
   color: #fff;
   font-size: 30px;
   font-family: ヒラギノ明朝 ProN;
@@ -180,6 +194,7 @@ const MenuAboutUs = styled.div<{ isSelected: boolean }>`
   border-bottom: solid 2px #fff;
 `;
 const MenuEvents = styled.div<{ isSelected: boolean }>`
+  cursor: pointer;
   color: #fff;
   font-size: 30px;
   font-family: ヒラギノ明朝 ProN;
@@ -192,6 +207,7 @@ const MenuEvents = styled.div<{ isSelected: boolean }>`
   border-bottom: solid 2px #fff;
 `;
 const MenuMember = styled.div<{ isSelected: boolean }>`
+  cursor: pointer;
   color: #fff;
   font-size: 30px;
   font-family: ヒラギノ明朝 ProN;
@@ -204,6 +220,7 @@ const MenuMember = styled.div<{ isSelected: boolean }>`
   border-bottom: solid 2px #fff;
 `;
 const MenuGallary = styled.div<{ isSelected: boolean }>`
+  cursor: pointer;
   color: #fff;
   font-size: 30px;
   font-family: ヒラギノ明朝 ProN;
@@ -216,6 +233,7 @@ const MenuGallary = styled.div<{ isSelected: boolean }>`
   border-bottom: solid 2px #fff;
 `;
 const MenuQandA = styled.div<{ isSelected: boolean }>`
+  cursor: pointer;
   color: #fff;
   font-size: 30px;
   font-family: ヒラギノ明朝 ProN;
@@ -236,6 +254,7 @@ const Sns = styled.div`
   left: 15px;
 `;
 const Twitter = styled.div`
+  cursor: pointer;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -243,6 +262,7 @@ const Twitter = styled.div`
   left: 10px;
 `;
 const Instagram = styled.div`
+  cursor: pointer;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -250,6 +270,7 @@ const Instagram = styled.div`
   left: 80px;
 `;
 const Line = styled.div`
+  cursor: pointer;
   width: 30px;
   height: 30px;
   position: absolute;

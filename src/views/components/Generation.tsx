@@ -4,8 +4,7 @@ import MemberInfoLeft from "./MemberInfoLeft";
 import MemberInfoRight from "./MemberInfoRight";
 import history from "../../utils/history";
 import { Reveal, RevealMode, Animation } from "react-genie";
-import arrow from '../images/InfoImages/arrow.png'
-
+import arrow from "../images/InfoImages/arrow.png";
 
 interface Props {
   number: number;
@@ -37,13 +36,12 @@ const Generation: React.FC<Props> = props => {
     return (
       <SampleBox>
         <Button onClick={gotoMember}>
-          <Arrow src={arrow}/>
+          <Arrow src={arrow} />
         </Button>
         <Th>{props.number}th</Th>
         <MemberBox>
           <Sex>Mens</Sex>
           <Flex>
-          
             <MemberInfoLeft
               picture={props.member.member1.picture}
               name={props.member.member1.name}
@@ -161,7 +159,7 @@ const Generation: React.FC<Props> = props => {
     return (
       <SampleBox>
         <Button onClick={gotoMember}>
-          <Arrow src={arrow}/>
+          <Arrow src={arrow} />
         </Button>
         <Th>{props.number}th</Th>
         <MemberBox>
@@ -312,7 +310,7 @@ const SampleBox = styled.div`
 const Th = styled.div`
   font-size: 45px;
   margin-right: 60%;
-  margin-top:20px;
+  margin-top: 20px;
   font-family: "ヒラギノ明朝 ProN W6";
   font-weight: lighter;
 `;
@@ -335,24 +333,22 @@ const Text = styled.div`
   margin: 10% 3% 10%;
   font-size: 15px;
   font-family: ヒラギノ明朝 ProN;
-  border-top:solid 1px black;
-  padding-top:20px;
+  border-top: solid 1px black;
+  padding-top: 20px;
 `;
 const Button = styled.button`
-  width:50px;
-  height:50px;
-  background-color:#ddd;
-  margin-right:80%;
-  margin-top:20px;
-  margin-bottom:50p;
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  margin-right: 80%;
+  margin-top: 20px;
+  margin-bottom: 50p;
 `;
- 
+
 const Arrow = styled.img`
-object-fit: contain;
-width: 100%;
-height: 100%;
-  
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 `;
- 
 
 export default Generation;

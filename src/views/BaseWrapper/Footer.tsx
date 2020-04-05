@@ -15,17 +15,29 @@ const Footer: React.FC = props => {
             <Sinkan>只今、新歓の申込みを受け付けております。</Sinkan>
             <Sns>
               <Twitter>
-                <a href="https://mobile.twitter.com/bluemarlin1996">
+                <a
+                  href="https://mobile.twitter.com/bluemarlin1996"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon src={TwitterIcon}></Icon>
                 </a>
               </Twitter>
               <Instagram>
-                <a href="https://www.instagram.com/bluemarlin2020/?hl=ja">
+                <a
+                  href="https://www.instagram.com/bluemarlin2020/?hl=ja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon src={InstagramIcon}></Icon>
                 </a>
               </Instagram>
               <Line>
-                <a href="https://lin.ee/rvBRrW4">
+                <a
+                  href="https://lin.ee/rvBRrW4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon src={LineIcon}></Icon>
                 </a>
               </Line>
@@ -52,7 +64,6 @@ const Screen = styled.div`
   font-family: ヒラギノ明朝 ProN;
   text-align: center;
   background-color: #faf8f5;
-  
 `;
 const Contact = styled.div`
   height: 120px;
@@ -61,25 +72,23 @@ const Contact = styled.div`
   position: absolute;
   left: 15px;
   margin-top: 15px;
-  padding-top:15px;
+  padding-top: 15px;
   font-family: ヒラギノ明朝 ProN;
   text-align: center;
-  background-color:#FAF8F5
-
+  background-color: #faf8f5;
 `;
 const ContactText = styled.div`
-  position:absolute;
+  position: absolute;
   height: 16px;
   width: 40%;
   font-size: 13px;
   border-bottom: solid 1px #707070;
-  left:30%;
-  right:30%;  
+  left: 30%;
+  right: 30%;
 `;
 const Sinkan = styled.div`
   margin-top: 20px;
   font-size: 11px;
-  
 `;
 const Sns = styled.div`
   height: 80px;
@@ -90,6 +99,7 @@ const Sns = styled.div`
   margin-top: 20px;
 `;
 const Twitter = styled.div`
+  cursor: pointer;
   width: 40px;
   height: 40px;
   position: absolute;
@@ -97,11 +107,13 @@ const Twitter = styled.div`
   top: 0px;
 `;
 const Instagram = styled.div`
+  cursor: pointer;
   width: 40px;
   height: 40px;
   margin: 0 auto;
 `;
 const Line = styled.div`
+  cursor: pointer;
   width: 40px;
   height: 40px;
   position: absolute;
@@ -113,7 +125,6 @@ const Icon = styled.img`
   height: auto;
   width/***/: auto;
   opacity: 0.7;
-  
 `;
 
 export default Footer;
