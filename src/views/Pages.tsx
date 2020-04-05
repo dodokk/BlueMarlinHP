@@ -54,7 +54,27 @@ const Pages: React.FC = props => {
             exact
             path="/generation/23th"
             render={() => (
-              <Generation number={23} text={<div></div>} member={Member23th} />
+              <Generation
+                number={23}
+                text={
+                  <div>
+                    23thのメンバーはとにかく明るくパッションの
+                    <br />
+                    ある子の集まりです！
+                    <br />
+                    いつも元気で明るい女の子達を筆頭に優しい男の
+                    <br />
+                    子達がそこに乗っていく。そのバランスがなんと
+                    <br />
+                    も絶妙で、23thのいいところです！
+                    <br />
+                    先輩ともすぐに仲良くなれる23thなら後輩ともす
+                    <br />
+                    ぐに打ち解けられるでしょう！
+                  </div>
+                }
+                member={Member23th}
+              />
             )}
           />
           {/* <Route exact path="*">

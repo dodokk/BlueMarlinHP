@@ -349,6 +349,12 @@ const Member23th = {
         彼女が写ってる写真の45%はウィンクしている。
       </>
     )
+  },
+  member15: {
+    name: "",
+    picture: "",
+    profile: "",
+    doc: <></>
   }
 };
 
