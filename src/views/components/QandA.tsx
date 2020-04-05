@@ -7,8 +7,6 @@ import Footer from "../BaseWrapper/Footer";
 import svg1 from "../images/Member/footertext.svg";
 import ReactVivus from "react-vivus";
 
-
-
 const QandA: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
   // const [状態変数, 状態変数を変更する関数] = useState(初期値);
@@ -136,7 +134,7 @@ const QandA: React.FC = props => {
           </Content>
         </FooterText>
       </Screen>
-      
+
       <Footer />
     </>
   );
@@ -155,7 +153,7 @@ const Screen = styled.div`
 `;
 const Title = styled.h1`
   position: absolute;
-  top: 40px;
+  top: 8vh;
   left: 5%;
   right: 5%;
   text-align: center;
@@ -168,7 +166,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 180px;
+  top: 27vh;
   padding: 0;
   left: 10%;
   right: 10%;
