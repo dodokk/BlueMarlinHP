@@ -20,15 +20,15 @@ const Top: React.FC = props => {
   const bgTexts = ["B", "L", "U", "E", "M", "A", "R", "L", "I", "N"];
   const texts = [
     "Blue",
-    "Liberty",
+    "Laugh",
     "Unity",
     "Eternal",
-    "Matey",
-    "Aeonian",
+    "Majestic",
+    "Active",
     "Rarity",
     "Legend",
     "Invaluable",
-    "Nostalgia"
+    "Nostalgic"
   ];
 
   const handleChange = index => {
