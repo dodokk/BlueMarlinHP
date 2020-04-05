@@ -142,7 +142,7 @@ const Top: React.FC = props => {
               <Screen>
                 {/* // <div className={classes[`slide${index}`]}> */}
                 {/* // <Test>{item}</Test> */}
-                
+
                 <Img src={item} />
                 <SlideLetterBg
                   style={{ backgroundImage: `url(${items[index]})` }}
@@ -169,7 +169,7 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity:0.4;
+  opacity: 0.4;
 `;
 const Filter = styled.div`
   position: absolute;
@@ -191,6 +191,7 @@ const Tabs = styled.ol`
   text-align: center;
 `;
 const Tab = styled.li`
+  cursor: pointer;
   list-style: none;
   display: inline-block;
   margin: 7px;
