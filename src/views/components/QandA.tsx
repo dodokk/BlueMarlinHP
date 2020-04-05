@@ -155,7 +155,7 @@ const Screen = styled.div`
 `;
 const Title = styled.h1`
   position: absolute;
-  top: 40px;
+  top: 8vh;
   left: 5%;
   right: 5%;
   text-align: center;
@@ -168,7 +168,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 180px;
+  top: 27vh;
   padding: 0;
   left: 10%;
   right: 10%;
