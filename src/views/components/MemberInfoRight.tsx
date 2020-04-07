@@ -77,7 +77,7 @@ const Img = styled.img`
 `;
 
 const MemberName = styled.div`
-  font-family: Bodoni 72 Oldstyle;
+  font-family: ヒラギノ明朝 ProN;
   font-size: 25px;
 `;
 const MemberInfo = styled.div`
@@ -110,7 +110,7 @@ const TextModal = styled.div`
 `;
 const BoxModal = styled.div`
   width: 310px;
-  height: 538px;
+  height: 500px;
   text-align: center;
 `;
 

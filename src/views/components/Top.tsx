@@ -20,15 +20,15 @@ const Top: React.FC = props => {
   const bgTexts = ["B", "L", "U", "E", "M", "A", "R", "L", "I", "N"];
   const texts = [
     "Blue",
-    "Liberty",
+    "Laugh",
     "Unity",
     "Eternal",
-    "Matey",
-    "Aeonian",
+    "Majestic",
+    "Active",
     "Rarity",
     "Legend",
     "Invaluable",
-    "Nostalgia"
+    "Nostalgic"
   ];
 
   const handleChange = index => {
@@ -132,6 +132,7 @@ const Top: React.FC = props => {
               N
             </Tab>
           </Tabs>
+          <Filter></Filter>
           <SwipeableViews
             index={tabIndex}
             onChangeIndex={index => handleChange(index)}
@@ -141,7 +142,7 @@ const Top: React.FC = props => {
               <Screen>
                 {/* // <div className={classes[`slide${index}`]}> */}
                 {/* // <Test>{item}</Test> */}
-                <Filter></Filter>
+
                 <Img src={item} />
                 <SlideLetterBg
                   style={{ backgroundImage: `url(${items[index]})` }}
@@ -168,13 +169,14 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   z-index: 1;
+  opacity: 0.4;
 `;
 const Filter = styled.div`
   position: absolute;
   width: 100%;
   height: 100vh;
-  z-index: 2;
-  background-color: rgba(11, 15, 39, 0.83);
+  z-index: 0;
+  background-color: black;
 `;
 const Tabs = styled.ol`
   position: absolute;
@@ -189,6 +191,7 @@ const Tabs = styled.ol`
   text-align: center;
 `;
 const Tab = styled.li`
+  cursor: pointer;
   list-style: none;
   display: inline-block;
   margin: 7px;

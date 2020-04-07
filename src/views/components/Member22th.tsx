@@ -316,7 +316,7 @@ const Member22th = {
   member14: {
     name: "しほ",
     picture: siho,
-    profile: "東洋英和女学院大学　国際社会　国際社会",
+    profile: "東洋英和女学院大学　国際社会　国際社会　東京",
     doc: (
       <>
         お母さん気質なためみんなの面倒も見るし度が過ぎ
@@ -354,12 +354,6 @@ const Member22th = {
         彼女の魅力を体感してほしい。
       </>
     )
-  },
-  member16: {
-    name: "",
-    picture: "",
-    profile: "",
-    doc: <></>
   }
 };
 

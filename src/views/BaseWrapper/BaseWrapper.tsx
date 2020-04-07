@@ -13,21 +13,15 @@ const BaseWrapper: React.FC = props => {
   // ページ遷移するときは↓を使う
 
   return (
-    <>
+    <Screen>
       <RevealGlobalStyles />
       {props.children}
-    </>
+    </Screen>
   );
 };
 
-const SampleBox = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const Screen = styled.div`
+  // 　max-width:400px;
 `;
 
 export default BaseWrapper;

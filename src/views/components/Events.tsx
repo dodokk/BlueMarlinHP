@@ -31,6 +31,8 @@ import Mar3 from "../images/Events/Mar3.jpg";
 import Header from "../BaseWrapper/Header";
 import Footer from "../BaseWrapper/Footer";
 import { Reveal, AnimatedTitle, Animation } from "react-genie";
+import ReactVivus from "react-vivus";
+import svg1 from "../images/Member/footertext.svg";
 
 const Events: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
@@ -801,6 +803,23 @@ const Events: React.FC = props => {
             </MarchText1>
           </March>
         </Calender>
+        <FooterText>
+          <ReactVivus
+            id=" foo "
+            option={{
+              file: svg1,
+              type: "scenario-sync",
+              duration: 50,
+              animTimingFunction: " EASE "
+            }}
+            style={{ width: " 100%", position: "absolute", top: "" }}
+          />
+          <Content>
+            ぶるまりは海だけではなく陸でも楽しく活動をし<br></br>
+            ています。１年を通して様々な企画があり、どれ<br></br>
+            もとても充実した物になっています。
+          </Content>
+        </FooterText>
       </Screen>
       <Footer />
     </>
@@ -837,7 +856,7 @@ const Title = styled.h1`
 const TitleText = styled.div`
   position: absolute;
   font-family: ヒラギノ明朝 ProN;
-  top: 23vh;
+  top: 180px;
   padding: 0;
   left: 10%;
   right: 10%;
@@ -849,7 +868,7 @@ const Calender = styled.div`
   position: absolute;
   width: 100%;
   height: 300vh;
-  top: 32vh;
+  top: 300px;
   text-align: center;
 `;
 const April = styled.div`
@@ -914,9 +933,10 @@ const January = styled.div`
 `;
 const February = styled.div`
   position: relative;
-  height: 130vh;
+  height: 120vh;
   width: 100%;
   font-family: ヒラギノ明朝 ProN;
+  // background-color:#ddd;
 `;
 const March = styled.div`
   position: relative;
@@ -1325,4 +1345,21 @@ const MarchText1 = styled.div`
   top: -50vh;
   letter-spacing: 3px;
 `;
+
+const FooterText = styled.div`
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  paddingfont-family: ヒラギノ明朝 ProN;
+  top: 1085vh;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  // background-color:#ddd;
+  height: 12vh;
+`;
+const Content = styled.div`
+  margin-top: 1.5vh;
+`;
+
 export default Events;
