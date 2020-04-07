@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import history from "../../utils/history";
 import styled from "styled-components";
-import Iframe from 'react-iframe';
+import Iframe from "react-iframe";
 import Header from "../BaseWrapper/Header";
 import Footer from "../BaseWrapper/Footer";
 import Photo1 from "../images/Gallery/photo1.jpg";
@@ -12,7 +12,6 @@ import Photo5 from "../images/Gallery/photo5.jpg";
 import Photo6 from "../images/Gallery/photo6.jpg";
 import ReactVivus from "react-vivus";
 import svg1 from "../images/Member/footertext.svg";
-
 
 const Gallery: React.FC = props => {
   // コンポーネントが状態を持つときは↓を使う
@@ -25,8 +24,8 @@ const Gallery: React.FC = props => {
   // };
 
   return (
-  <>
-  <Header />
+    <>
+      <Header />
       <Screen>
         <Title>Gallery</Title>
         <TitleText>
@@ -36,54 +35,69 @@ const Gallery: React.FC = props => {
         <Movie>
           <Text>Movie</Text>
           <Movie2019>
-            2019年　新歓動画
-            <Iframe url="https://player.vimeo.com/video/330928149"
+            2019年 新歓動画
+            <Iframe
+              url="https://player.vimeo.com/video/330928149"
               width="320"
               height="180"
               className="myClassname"
             />
           </Movie2019>
           <Movie2018>
-            2018年　新歓動画
-            <Iframe url="https://player.vimeo.com/video/265123888"
+            2018年 新歓動画
+            <Iframe
+              url="https://player.vimeo.com/video/265123888"
               width="320"
               height="180"
               className="myClassname"
-              />
+            />
           </Movie2018>
-          
         </Movie>
         <Photos>
-            <Text style={{ marginBottom:'30px' }}>Photo</Text >
-            <Photo src={Photo1} style={{  width:'40%' }}/>
-            <Photo src={Photo2} style={{  width:'57%' }}/>
-            <Photo src={Photo3} style={{  width:'40%', marginTop:'-41px'}}/>
-            <Photo src={Photo4} style={{  width:'57%' }}/>
-            <Photo src={Photo5} style={{  width:'40%' ,marginTop:'-80px' ,height:'78px',  objectFit:'cover'}}/>
-            <Photo src={Photo6} style={{  width:'98%' ,marginTop:'-22px' ,height:'150px',  objectFit:'cover'}}/>
-        </Photos>
-
-        </Screen>
-        <FooterText>
-          <ReactVivus
-            id=" foo "
-            option={{
-              file: svg1,
-              type: "scenario-sync",
-              duration: 50,
-              animTimingFunction: " EASE "
+          <Text style={{ marginBottom: "30px" }}>Photo</Text>
+          <Photo src={Photo1} style={{ width: "40%" }} />
+          <Photo src={Photo2} style={{ width: "57%" }} />
+          <Photo src={Photo3} style={{ width: "40%", marginTop: "-41px" }} />
+          <Photo src={Photo4} style={{ width: "57%" }} />
+          <Photo
+            src={Photo5}
+            style={{
+              width: "40%",
+              marginTop: "-80px",
+              height: "78px",
+              objectFit: "cover"
             }}
-            style={{ width: " 100%", position: "absolute", top: "" }}
           />
-          <Content>
-            深い海でも使えるカメラを持っいる人が多数いま<br></br>
-            す。また、学祭の売り上げで買ったドローンで空<br></br>
-            からもたくさん写真を撮っています。
-
-          </Content>
-        </FooterText>
-  <Footer />
-  </>
+          <Photo
+            src={Photo6}
+            style={{
+              width: "98%",
+              marginTop: "-22px",
+              height: "150px",
+              objectFit: "cover"
+            }}
+          />
+        </Photos>
+      </Screen>
+      <FooterText>
+        <ReactVivus
+          id=" foo "
+          option={{
+            file: svg1,
+            type: "scenario-sync",
+            duration: 50,
+            animTimingFunction: " EASE "
+          }}
+          style={{ width: " 100%", position: "absolute", top: "" }}
+        />
+        <Content>
+          深い海でも使えるカメラを持っている人が多数い<br></br>
+          ます。また、学祭の売り上げで買ったドローンで<br></br>
+          空からもたくさん写真を撮っています。
+        </Content>
+      </FooterText>
+      <Footer />
+    </>
   );
 };
 
@@ -131,47 +145,46 @@ const Movie = styled.div`
   font-family: ヒラギノ明朝 ProN;
   // background-color: #ddd;
   top: 15%;
-  width:90%;
-  height:800px;
-  margin:0 auto;
+  width: 90%;
+  height: 800px;
+  margin: 0 auto;
 `;
 
 const Text = styled.div`
   font-family: ヒラギノ明朝 ProN;
   // background-color: #fff;
-  width:100;
-  font-size:30px;
-  text-align:left;
-  border-bottom:solid 1px black;
+  width: 100;
+  font-size: 30px;
+  text-align: left;
+  border-bottom: solid 1px black;
 `;
 
 const Movie2019 = styled.div`
   font-family: ヒラギノ明朝 ProN;
-  width:320px;
+  width: 320px;
   // height:180px;
-  margin:20px auto;
+  margin: 20px auto;
 `;
 
 const Movie2018 = styled.div`
   font-family: ヒラギノ明朝 ProN;
-  width:320px;
-  height:180px;
-  margin:20px auto;
+  width: 320px;
+  height: 180px;
+  margin: 20px auto;
 `;
 
 const Photos = styled.div`
   font-family: ヒラギノ明朝 ProN;
-  width:90%;
+  width: 90%;
   margin: 0 auto;
-
 `;
 
 const Photo = styled.img`
   // position: inline-block;
   background-color: black;
   vertical-align: top;
-  width:32%;
-  margin:2px;
+  width: 32%;
+  margin: 2px;
 `;
 
 const FooterText = styled.div`
