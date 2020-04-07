@@ -76,9 +76,9 @@ const Gallery: React.FC = props => {
             style={{ width: " 100%", position: "absolute", top: "" }}
           />
           <Content>
-            深い海でも使えるカメラを持っいる人が多数いま<br></br>
-            す。また、学祭の売り上げで買ったドローンで空<br></br>
-            からもたくさん写真を撮っています。
+            深い海でも使えるカメラを持っている人が多数い<br></br>
+            ます。また、学祭の売り上げで買ったドローンで<br></br>
+            空からもたくさん写真を撮っています。
 
           </Content>
         </FooterText>
