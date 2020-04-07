@@ -91,7 +91,7 @@ const Member23th = {
   member4: {
     name: "うらしょー",
     picture: urasho,
-    profile: "横浜国立大学　経済学部　東京",
+    profile: "横浜国立大学　経営学部　東京",
     doc: (
       <>
         だいぶ人見知りなので、きっと後輩が入ってきても
@@ -208,7 +208,7 @@ const Member23th = {
   member10: {
     name: "あやの",
     picture: ayano,
-    profile: "東洋英和女学院大学　人間社会学部　国際交流　山梨",
+    profile: "東洋英和女学院大学　人間社会学部　保育こども学科　神奈川",
     doc: (
       <>
         可愛らしいフェイスとは裏腹にとても毒舌なギャッ

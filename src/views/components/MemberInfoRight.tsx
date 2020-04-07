@@ -86,10 +86,10 @@ const MemberInfo = styled.div`
   margin-left: 15px;
 `;
 const Modal1 = styled(Modal)`
-  margin-top: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
 `;
 const ImgModal = styled.img`
   width: 274px;
