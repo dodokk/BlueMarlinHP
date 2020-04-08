@@ -40,7 +40,7 @@ const Generation: React.FC<Props> = props => {
         </Button>
         <Th>{props.number}th</Th>
         <MemberBox>
-          <Sex>Mens</Sex>
+          <Sex>Men</Sex>
           <Flex>
             <MemberInfoLeft
               picture={props.member.member1.picture}
@@ -99,7 +99,7 @@ const Generation: React.FC<Props> = props => {
           </Flex>
         </MemberBox>
         <div>
-          <Sex>Women's</Sex>
+          <Sex>Women</Sex>
           <Flex>
             <MemberInfoLeft
               picture={props.member.member9.picture}
@@ -163,7 +163,7 @@ const Generation: React.FC<Props> = props => {
         </Button>
         <Th>{props.number}th</Th>
         <MemberBox>
-          <Sex>Mens</Sex>
+          <Sex>Men</Sex>
           <Flex>
             <MemberInfoLeft
               picture={props.member.member1.picture}
@@ -230,7 +230,7 @@ const Generation: React.FC<Props> = props => {
           </Flex>
         </MemberBox>
         <div>
-          <Sex>Women's</Sex>
+          <Sex>Women</Sex>
           <Flex>
             <MemberInfoLeft
               picture={props.member.member10.picture}

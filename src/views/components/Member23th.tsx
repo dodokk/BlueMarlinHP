@@ -44,7 +44,7 @@ const Member23th = {
   member2: {
     name: "こうき",
     picture: koki,
-    profile: "横浜国立大学　理工学部　化学生命学科",
+    profile: "横浜国立大学　理工学部　化学生命学科 東京",
     doc: (
       <>
         みんなのメンバー紹介を書いてみました。片寄涼太

@@ -54,7 +54,7 @@ const Member: React.FC = props => {
             style={{ width: " 100%", position: "absolute", top: "" }}
           />
           <Content>
-            僕たちは22th(3年生)15人、23th(2年生)15人で<br></br>
+            僕たちは22th(3年生)15人、23th(2年生)14人で<br></br>
             活動しています。写真をタップして一人一人の<br></br>
             自己紹介を覗いてみてください。
           </Content>
