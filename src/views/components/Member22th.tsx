@@ -95,7 +95,7 @@ const Member22th = {
   member4: {
     name: "ぶっちー",
     picture: bucchi,
-    profile: "横浜国立大学　経済学部 宮城",
+    profile: "横浜国立大学　経済学部　宮城",
     doc: (
       <>
         顔といい、身長といいなかなかのハイスペックな彼
