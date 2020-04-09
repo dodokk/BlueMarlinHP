@@ -509,7 +509,7 @@ const Events: React.FC = props => {
             </Parallax>
             <Parallax speed={2}>
               <OctberText1>
-                秋大瀬と横国学際。秋の大瀬は夏<br></br>
+                秋大瀬と横国学祭。秋の大瀬は夏<br></br>
                 とは一風変わり、景色はもちろん<br></br>
                 海の中の生物も変わります。<br></br>
                 そして、学祭。サークルで模擬店<br></br>
