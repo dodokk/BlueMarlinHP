@@ -312,7 +312,7 @@ const Member23th = {
   member13: {
     name: "はなえ",
     picture: hanae,
-    profile: "フェリス女学院　文学部　英語英文学科　栃木",
+    profile: "フェリス女学院　文学部　英語英文学科　茨城",
     doc: (
       <>
         スタイル抜群の彼女はいつもテンションが高く、い
