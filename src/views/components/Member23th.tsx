@@ -91,7 +91,7 @@ const Member23th = {
   member4: {
     name: "うらしょー",
     picture: urasho,
-    profile: "横浜国立大学　経営学部　東京",
+    profile: "横浜国立大学　経営学部　神奈川",
     doc: (
       <>
         だいぶ人見知りなので、きっと後輩が入ってきても
@@ -312,7 +312,7 @@ const Member23th = {
   member13: {
     name: "はなえ",
     picture: hanae,
-    profile: "フェリス女学院　文学部　英語英文学科　神奈川",
+    profile: "フェリス女学院　文学部　英語英文学科　栃木",
     doc: (
       <>
         スタイル抜群の彼女はいつもテンションが高く、い
